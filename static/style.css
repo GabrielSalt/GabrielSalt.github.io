@@ -1,0 +1,15 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+.oval {
+    height: 50px;
+    width: 100px;
+    background-color: #555;
+    border-radius: 50%;
+  }
+

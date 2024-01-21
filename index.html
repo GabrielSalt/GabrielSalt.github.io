@@ -23,18 +23,18 @@
         // Dimensions: 1470 * 802
 
         drawStar(ctx, 180, 480, 5, 70, 30, 10, 'black', 'magenta');
-        drawStar(ctx, 1200, 330, 5, 130, 55, 10, 'black', 'magenta');
-        drawStar(ctx, 740, 660, 5, 35, 12, 10, 'black', 'magenta');
-        drawStar(ctx, 330, 620, 5, 70, 30, 15, 'black', 'black');
-        drawStar(ctx, 330, 620, 5, 10, 4, 15, 'white', 'white');
+        drawStar(ctx, 1200/1470*ctx.canvas.width, 330, 5, 130, 55, 10, 'black', 'magenta');
+        drawStar(ctx, 740/1470*ctx.canvas.width, 660, 5, 35, 12, 10, 'black', 'magenta');
+        drawStar(ctx, 330/1470*ctx.canvas.width, 620, 5, 70, 30, 15, 'black', 'black');
+        drawStar(ctx, 330/1470*ctx.canvas.width, 620, 5, 10, 4, 15, 'white', 'white');
         drawStar(ctx, ctx.canvas.width / 2, 140, 5, 55, 22, 15, 'black', 'black');
         drawStar(ctx, ctx.canvas.width / 2, 140, 5, 10, 4, 15, 'white', 'white');
-        drawStar(ctx, 1000, 130, 5, 70, 15, 15, 'black', 'black');
+        drawStar(ctx, 1000/1470*ctx.canvas.width, 130, 5, 70, 15, 15, 'black', 'black');
 
-        ellipse(ctx, 1120, 580, 200, 100, 2 * Math.PI, 'magenta', 'magenta');
-        ellipse(ctx, 1120, 580, 190, 95, 2 * Math.PI, 'black', 'black');
-        hexagon(200, 200, 160, 'black', 'black');
-        ellipse(ctx, 735, 200, 100, 50, Math.PI, 'black', null)
+        ellipse(ctx, 1120/1470*ctx.canvas.width, 580, 200, 100, 2 * Math.PI, 'magenta', 'magenta');
+        ellipse(ctx, 1120/1470*ctx.canvas.width, 580, 190, 95, 2 * Math.PI, 'black', 'black');
+        hexagon(200/1470*ctx.canvas.width, 200, 160, 'black', 'black');
+        ellipse(ctx, 735/1470*ctx.canvas.width, 200, 100, 50, Math.PI, 'black', null)
 
         const textStar = new Image(100,100)
         textStar.src = "textStar.png"

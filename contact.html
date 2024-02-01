@@ -25,8 +25,8 @@
             <label for="email">Email:</label>
             <input type="email" id="email" name='email' placeholder="Enter your email">
     
-            <label for="longText">Long Text:</label>
-            <textarea id="longText" name="description" placeholder="Write longer text here"></textarea>
+            <label for="longText">Describe your area of work: </label>
+            <textarea id="longText" name="description" placeholder="..."></textarea>
         </div>
     
         <div id="pressInputs" class="hidden inputs">
@@ -35,9 +35,12 @@
     
             <label for="email">Email:</label>
             <input type="email" id="email" name='email' placeholder="Enter your email">
+
+            <label for="email">Organisation:</label>
+            <input type="email" id="email" name='email' placeholder="Enter your organisation's name">
     
-            <label for="longText">Long Text:</label>
-            <textarea id="longText" name="description" placeholder="Write longer text here"></textarea>
+            <label for="longText">Enquiry:</label>
+            <textarea id="longText" name="description" placeholder=""></textarea>
         </div>
     
         <div id="clientsInputs" class="hidden inputs">
@@ -47,11 +50,10 @@
             <label for="email">Email:</label>
             <input type="email" id="email" name='email' placeholder="Enter your email">
     
-            <label for="longText">Long Text:</label>
-            <textarea id="longText" name="description" placeholder="Write longer text here"></textarea>
+            <label for="longText">Describe what you are looking for</label>
+            <textarea id="longText" name="description" placeholder="..."></textarea>
         </div>
-        <button onclick="submitForm()">Submit</button>
-
+        <button type="hidden" onclick="submitForm()">Submit</button>
         <input type="hidden" name="accessKey" value="a589219f-42dd-4cac-88d9-dd05a37872af">
         <input type="hidden" name="redirectTo" value="127.0.0.1:5500/?success">
         </form>

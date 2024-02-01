@@ -29,9 +29,9 @@ html, body {
 
   .carousel-inner > .carousel-item {
     vertical-align: center;
-    height: 70vh;
+    height: 80vh;
     width: auto;
-    max-width: 70vh;
+    max-width: 80vh;
  }
 
 .inner {

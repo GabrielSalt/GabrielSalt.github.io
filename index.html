@@ -1,5 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head> <title> text </title> </head> 
-    <body>text</body>
-</html>
+    <head> 
+        <title> KINVIG </title> 
+        <link rel="icon" type="image/x-icon" href="/static/icon.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+     </head> 
+     <body>
+        <div class="background">
+            <div class="top-bar">
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <img style="height:100px; width: auto" src="static/icon.png" alt="KINVIG">
+                </div>
+                <div class="nav-buttons">
+                        <a class="nav-button" href="#">Events</a>
+                        <a class="nav-button" href="#">About</a>
+                        <a class="nav-button" href="#">Contact</a>
+                </div>
+            </div>
+            <div style="margin-bottom: 40%;" class="title">
+                KINVIG
+                <p class="info"> Events, Trips and More! </p>
+                <button class="button">Tell Me More</button>
+            </div>
+        </div>
+        <h1 style="text-align: center;">Leadership Team</h1>
+        <div class="leadership-section">
+            <div class="leader">
+              <img src="static/leader1.jpg" alt="Leader 1">
+              <h3>John Doe</h3>
+              <p>President</p>
+            </div>
+            <div class="leader">
+              <img src="static/leader2.jpg" alt="Leader 2">
+              <h3>Jane Smith</h3>
+              <p>Vice President</p>
+            </div>
+            <div class="leader">
+              <img src="static/leader3.jpg" alt="Leader 3">
+              <h3>Michael Johnson</h3>
+              <p>Treasurer</p>
+            </div>
+            <!-- Add more leader divs as needed -->
+          </div>
+      </body>
+
+<style>
+    .background {
+    background-image: url('static/bruh.png');
+      background-size: cover;
+      background-position: center;
+      font-family: Arial, sans-serif;
+      height: 1000px;
+      width: '100%';
+      opacity: 1;
+    }
+
+    body {
+    margin: 0px;
+}
+  
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      color: white;
+    }
+  
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      margin-left: 25%;
+    }
+  
+    .nav-buttons {
+      display: flex;
+      gap: 40px;
+      margin-right: 20%;
+    }
+  
+    .nav-button {
+      color: white;
+      text-decoration: none;
+      font-size: 24px;
+    }
+  
+    .title {
+      text-align: center;
+      margin-top: 100px;
+      font-size: 60px;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+      
+.leadership-section {
+  margin: 50px auto;
+  max-width: 800px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.leader {
+  width: calc(30% - 20px);
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.leader img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.leader h3 {
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.leader p {
+  margin: 0;
+  font-size: 16px;
+}
+.button {
+  transition-duration: 0.4s;
+  width: 200px;
+  height: 80px;
+  border-radius: 5px;
+  border: none;
+  background-color: #4CAF50;
+  font-size: 24px;
+  opacity: 0.8;
+  color: white;
+}
+
+.button:hover {
+  opacity: 1; /* Green */
+}
+
+.info {
+    font-size: 48px;
+}
+
+.social-icons {
+    margin-left: 20%;
+    margin-top: auto;
+  display: flex;
+  gap: 20px;
+}
+
+.social-icon {
+
+  color: white;
+  font-size: 60px;
+  text-decoration: none;
+  align-items: baseline;
+}
+  </style>
+
+  </html>

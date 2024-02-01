@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    background-color: black;
+    overflow: hidden;
+}
+
+#home {
+    background-color: black;
+    color: white;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    height: 5%;
+    width: 10%;
+    border: 0px;
+    transform: translateX(-50%);
+    font-size: 36px;
+}
+
+.undo-button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .undo-button .icon {
+    width: 12px;
+    height: 12px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-135deg);
+    margin-right: 5px;
+  }
+
+.gallery-container {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    right: 20%;
+    bottom: 10%;
+    width: 60%;
+    height: 80%;
+    background-color: black;
+    display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+}
+
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%;
+    font-size: 24px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.image-wrapper {
+    position: relative;
+    left: 0;
+    top: 0;
+    max-width: 90%;
+    max-height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+
+#gallery-image {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+    transition: transform 0.5s ease;
+    object-fit: cover;
+}

@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DAVID SHILLING</title>
-    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="static/index.css">
     <script src="static/index.js"></script>
 </head>
 <body>
     <div id="container">
-        <div id="pages" class="column">
+        <div id="pagesleft" class="column">
             <div id="Hats" class="subPage" onclick="overlay(this.children[0].getAttribute('src'))">
                     <image name="Hats" src="static/images/Hats.png" class="subImage"></image>
             </div>
@@ -22,6 +22,10 @@
             <div id="Jewellery" class="subPage" onclick="overlay(this.children[0].getAttribute('src'))">
                     <image name="Jewellery" src="static/images/Jewellery.png" class="subImage"></image>
             </div>
+        </div> 
+        <div id="centre" class="column">
+        </div>
+        <div id="pagesright" class="column">
             <div id="Music" class="subPage" onclick="overlay(this.children[0].getAttribute('src'))">
                     <image name="Music" src="static/images/Music.png" class="subImage"></image>
             </div>
@@ -35,16 +39,6 @@
                     <image name="HST" src="static/images/HST.png" class="subImage"></image>
             </div>
         </div> 
-
-        <div id="centre" class="column">
-            <image src="static/images/logo.png" id="logo"/>
-            <div id="contact">
-                CONTACT
-            </div>
-        </div>
-
-        <div id="gallery" class="column">
-        </div>
     </div>
     <div id="tint" hidden="true" onclick="hideOverlay(event)">
         </div>

@@ -4,21 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap">
+    <link rel="icon" type="image/x-icon" href="static/images/dslogo.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato">
     <link rel="stylesheet" href="static/contact.css">
 </head>
 <body>
-
     <div class="container">
-        <h1>Contact Form</h1>
+        <h1>Contact</h1>
         <div class="options">
-            <button id="studentBtn" class="option-button" onclick="showInputs('student')">Student / Work</button>
-            <button id="pressBtn" class="option-button" onclick="showInputs('press')">Press / Media</button>
-            <button id="clientsBtn" class="option-button" onclick="showInputs('clients')">Clients / Commission</button>
+            <button id="studentBtn" class="option-button button" onclick="showInputs('student')">Student / Work</button>
+            <button id="pressBtn" class="option-button button" onclick="showInputs('press')">Press / Media</button>
+            <button id="clientsBtn" class="option-button button" onclick="showInputs('clients')">Clients / Commission</button>
         </div>
-        <form action="https://api.staticforms.xyz/submit" method="post">
-    
-        <div id="studentInputs" class="hidden inputs">
+        <form action="https://api.staticforms.xyz/submit" method="post" onsubmit="return validateForm()">
+            <div id="studentInputs" class="hidden inputs">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" placeholder="Enter your name">
     
@@ -27,6 +26,9 @@
     
             <label for="longText">Describe your area of work: </label>
             <textarea id="longText" name="description" placeholder="..."></textarea>
+            <input type="hidden" name="accessKey" value="a589219f-42dd-4cac-88d9-dd05a37872af">
+            <input type="hidden" name="redirectTo" value="https://example.com/contact/success">
+            <button type="hidden" class='submit' onclick="submitForm()">Submit</button>
         </div>
     
         <div id="pressInputs" class="hidden inputs">
@@ -41,6 +43,8 @@
     
             <label for="longText">Enquiry:</label>
             <textarea id="longText" name="description" placeholder=""></textarea>
+            <button type="hidden" class='submit' onclick="submitForm()">Submit</button>
+            <input type="hidden" name="accessKey" value="a589219f-42dd-4cac-88d9-dd05a37872af">
         </div>
     
         <div id="clientsInputs" class="hidden inputs">
@@ -52,11 +56,11 @@
     
             <label for="longText">Describe what you are looking for</label>
             <textarea id="longText" name="description" placeholder="..."></textarea>
+            <button type="hidden" class='submit' onclick="submitForm()">Submit</button>
+            <input type="hidden" name="accessKey" value="a589219f-42dd-4cac-88d9-dd05a37872af">
         </div>
-        <button type="hidden" onclick="submitForm()">Submit</button>
-        <input type="hidden" name="accessKey" value="a589219f-42dd-4cac-88d9-dd05a37872af">
-        <input type="hidden" name="redirectTo" value="127.0.0.1:5500/?success">
         </form>
+        <button onclick="location.href = '/';" id="home" class="btn btn-primary">home</button>
     </div>
 <script src="static/contact.js"></script>
 </body>

@@ -1,27 +1,43 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Lato', 'Arial', sans-serif; /* Change the font to Lato or your preferred font */
-    background-color: #000;
-    color: #fff;
+    font-family: 'Gill Sans MT', 'Lato', 'Arial', sans-serif; /* Change the font to Lato or your preferred font */
+    background-image: url('images/contactbackground.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
 }
 
 .container {
     max-width: 600px;
     margin: 50px auto;
     padding: 20px;
-    background-color: #111;
     border-radius: 10px;
 }
 
 h1 {
     text-align: center;
-    color: lightblue;
+    color: black;
+}
+
+#home {
+    color: black;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    height: 5%;
+    width: 10%;
+    border: 0px;
+    transform: translateX(-50%);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Geneva, Tahoma, sans-serif;
+    font-size: 36px;
+    background: none;
 }
 
 .options {
     display: flex;
     justify-content: space-between;
+    justify-content: center;
     margin-bottom: 20px;
 }
 
@@ -29,7 +45,6 @@ h1 {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background-color: #fff;
     color: #000;
     cursor: pointer;
 }
@@ -38,9 +53,14 @@ h1 {
     outline: none;
 }
 
+.submit {
+    left: 50%;
+    transform: translateX(-50%)
+}
+
 .option-button.selected {
-    background-color: lightblue;
-    color: #fff;
+    color: black;
+    outline: 1px solid magenta
 }
 
 .inputs {
@@ -59,23 +79,23 @@ input, textarea {
     box-sizing: border-box;
     border: 1px solid #fff;
     border-radius: 5px;
-    background-color: #fff;
     color: #000;
 }
 
-button {
+.button {
     width: 100%;
     padding: 10px;
-    background-color: lightblue;
-    color: #fff;
+    color: black;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    border: 1px solid black;
+    margin: 3px;
+    background: none;
 }
 
-button:hover {
-    border: 1px solid white;
+.button:hover {
+    outline: 1px solid magenta;
+    border-radius: 5px;
 }
 
 .hidden {

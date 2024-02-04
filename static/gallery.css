@@ -1,6 +1,7 @@
 html, body {
-    background-color: black !important;
-    background-size: cover;
+    background-color: white;
+    background-size: contain;
+    background-repeat: no-repeat;
     min-height: 100%;
     margin: 0;
 }
@@ -8,14 +9,14 @@ html, body {
 
 .container {
     margin: auto auto;
-    background-color: black;
     overflow: hidden;
     vertical-align: center;
+    margin: 3%;
 }
 
 #home {
-    background-color: white;
     color: black;
+    background-color: white;
     position: absolute;
     top: 90%;
     left: 50%;
@@ -23,7 +24,7 @@ html, body {
     width: 10%;
     border: 0px;
     transform: translateX(-50%);
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Geneva, Tahoma, sans-serif;
     font-size: 36px;
 }
 
@@ -60,6 +61,17 @@ html, body {
     flex-shrink: 0;
     left: auto;
     width: 100%;
-    height: 100%;
+    height: 90%;
     object-fit: contain;
 }
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel .carousel-indicators li {background-color: black;}
+.carousel .carousel-indicators li.active {background-color: magenta;}

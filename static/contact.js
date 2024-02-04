@@ -18,7 +18,20 @@ function showInputs(option) {
     selectedButton.setAttribute('aria-selected', true);
 }
 
-function submitForm() {
-    // Form submission logic
-    alert("Form submitted!");
-}
+function validateForm() {
+    // Get form elements
+    var form = document.getElementById("myForm");
+    var inputs = form.getElementsByTagName("input");
+
+    // Check if all fields are filled
+    for (var i = 0; i < inputs.length; i++) {
+        console.log(inputs[i])
+      if (inputs[i].type !== "submit" && inputs[i].value === "") {
+        alert("Please fill out all fields");
+        return false; // Prevent form submission
+      }
+    }
+
+    // If all fields are filled, submit the form
+    return true;
+  }

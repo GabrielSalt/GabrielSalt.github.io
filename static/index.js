@@ -40,3 +40,30 @@ function centreButtons(e) {
         }
     }
 }
+
+onload = (event) => {
+    centreSize()
+}
+
+onresize = (event) => {
+    centreSize()
+}
+
+function centreSize () {
+    centreImg = document.getElementById('centreimg')
+    if (window.innerWidth / window.innerHeight < 1669/934){
+        var newHeight =((window.innerWidth / window.innerHeight) / (1669/934))*100
+        
+        centreImg.style.height = `${newHeight}%`
+        centreImg.style.marginTop = `${(100-newHeight)}%`
+        centreImg.style.marginBottom = `${(100-newHeight)}%`
+    }
+    else {
+        centreImg.style.height = `100%`
+        centreImg.style.marginTop = `0%`
+        centreImg.style.marginBottom = `0%`
+    }
+
+    document.querySelector('.subPage').clientWidth = document.querySelector('.subPage').clientHeight
+    console.log(document.querySelector('.subPage').clientHeight)
+};

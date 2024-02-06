@@ -1,23 +1,24 @@
-#container {
-    font-family: Arial, sans-serif;
-    text-align: center;
+
+    #container {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        flex: 1;
+        height: 100vh;
+        grid-template-columns: 30% 40% 30%;
+        grid-template-rows: 100%;
+        background-size: 100% 100%;
+        background-image: url('images/1.png');
+        background-repeat: no-repeat;
+        justify-content: space-between;
+    }
+
+html, body {
     margin: 0;
     padding: 0;
-    display: grid;
-    flex: 1;
-    height: 100vh;
-    grid-template-columns: 30% 40% 30%;
-    grid-template-rows: 100%;
-    background-size: 100% 100%;
-    background-image: url('images/1.png');
-    background-repeat: no-repeat;
-    justify-content: space-between;
-
-}
-
-body {
-    margin: 0;
-    padding: 0;
+    overflow: hidden;
 } 
 
 #pagesleft {
@@ -37,14 +38,17 @@ body {
 }
 
 .subPage {
-    background-color: magenta;
     margin: auto;
-    width: auto;
-    height: 90%;
     border-radius: 20px;
     display: flex;
     justify-content: center;
-    filter: brightness(90%)
+    filter: brightness(90%);
+    position: relative;
+    height: 90%;
+    aspect-ratio : 1.2 / 1;
+    padding-bottom: 20%;
+    top: 5%;
+
 }
 
 .subPageLeft {
@@ -64,23 +68,20 @@ body {
     max-width: 90%;
     height: 95%;
     border-radius: 20px;
-    border: solid 5px magenta;
+    border: solid 8px magenta;
     vertical-align: middle;
 }
 
 #centre {
-    height:100%;
-    width:100%;
-    align-items: center;
-    display: flex;
-    flex: 1 0 auto;
     overflow: hidden;
-    object-fit: cover;
+    vertical-align: middle;
+    height: 100%;
 }
 
 #centreimg {
-    object-fit: cover;
-    overflow: hidden;
+     object-fit: contain;
+    height: 100%;
+    vertical-align: middle;
 }
 
 #gallery {
@@ -107,8 +108,8 @@ body {
 }
 
 #overlayImage {
-    width: 70%;
-    height: auto;
+    height: 100%;
+    width: auto;
     background-color: white;
     position: absolute;
     left: 15%;

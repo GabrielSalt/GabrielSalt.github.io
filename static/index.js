@@ -42,28 +42,72 @@ function centreButtons(e) {
 }
 
 onload = (event) => {
-    centreSize()
+    hideOverlay(event)
+    window.dispatchEvent(new Event('resize'));
 }
 
 onresize = (event) => {
-    centreSize()
+    console.log(getPathFromURL())
+    if (getPathFromURL() == "" || getPathFromURL() == "index" ) {
+        centreSize()
+    }
+    url = window.location.href
+    if (screen.width / screen.height > 1){
+        if (getPathFromURL() == "mobile") {
+            window.location.href = "index.html"
+        }
+    }
+    if (screen.width / screen.height <= 1){
+        if (getPathFromURL() == "index" || getPathFromURL() == "") {
+            window.location.href = "mobile.html"
+        }
+    }
 }
+
+function getPathFromURL() {
+    // Get the full URL
+    var fullPath = window.location.href;
+
+    // Remove protocol and domain
+    var pathWithoutDomain = fullPath.replace(/^https?:\/\/[^\/]+/, '');
+
+    // Remove file extension (e.g., '.html')
+    var pathWithoutExtension = pathWithoutDomain.replace(/\.\w+$/, '');
+
+    // Remove leading and trailing slashes
+    var trimmedPath = pathWithoutExtension.replace(/^\/|\/$/g, '');
+
+    return trimmedPath;
+}
+
 
 function centreSize () {
     centreImg = document.getElementById('centreimg')
-    if (window.innerWidth / window.innerHeight < 1669/934){
-        var newHeight =((window.innerWidth / window.innerHeight) / (1669/934))*100
-        
-        centreImg.style.height = `${newHeight}%`
-        centreImg.style.marginTop = `${(100-newHeight)}%`
-        centreImg.style.marginBottom = `${(100-newHeight)}%`
-    }
-    else {
-        centreImg.style.height = `100%`
-        centreImg.style.marginTop = `0%`
-        centreImg.style.marginBottom = `0%`
-    }
+    container = document.getElementById('container')
+        if ((window.innerWidth / window.innerHeight > 1200/934)) {
+            const newWidth = ((window.innerWidth / window.innerHeight) * 934)
+            const pagesWidth = ((newWidth - 670) / 2) / newWidth * 100
+            container.style.gridTemplateColumns = `${pagesWidth}% ${100-2*pagesWidth}% ${pagesWidth}%`
+            
+            const pages = document.getElementsByClassName('pages')
+            pages[0].style.width = "fit-content"
+            pages[1].style.width = "fit-content"
+            container.style.background = "url('static/images/backgroundmaybeidk.png') no-repeat"
+            container.style.backgroundSize = "100% 100%"
+        }
 
-    document.querySelector('.subPage').clientWidth = document.querySelector('.subPage').clientHeight
-    console.log(document.querySelector('.subPage').clientHeight)
+        else {
+            container.style.gridTemplateColumns = `22% 56% 22%`
+            var newHeight =((window.innerWidth / window.innerHeight) / (1200/934))*100
+            
+            centreImg.style.height = `${newHeight}%`
+            centreImg.style.marginTop = `${(100-newHeight)}%`
+            centreImg.style.marginBottom = `${(100-newHeight)}%`
+
+            const pages = document.getElementsByClassName('pages')
+            pages[0].style.width = "100%"
+            pages[1].style.width = "100%"
+            container.style.background = 'magenta'
+        }
+    document.querySelector('.subPage').clientHeight = document.querySelector('.subPage').clientWidth
 };

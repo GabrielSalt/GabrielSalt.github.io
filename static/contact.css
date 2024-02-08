@@ -1,12 +1,17 @@
 body {
-    margin: 0;
-    padding: 0;
     font-family: 'Gill Sans MT', 'Lato', 'Arial', sans-serif; /* Change the font to Lato or your preferred font */
     background-image: url('images/contactbackground.png');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     color: black;
 }
+
+body, html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
 
 .container {
     max-width: 600px;
@@ -23,8 +28,8 @@ h1 {
 #home {
     color: black;
     position: absolute;
-    top: 90%;
-    left: 50%;
+    top: 5%;
+    left: 90%;
     height: 5%;
     width: 10%;
     border: 0px;
@@ -55,7 +60,14 @@ h1 {
 
 .submit {
     left: 50%;
-    transform: translateX(-50%)
+    transform: translateX(-50%);
+    position: relative;
+    background-color: white;
+    color: black
+}
+
+.submit:hover {
+    cursor: pointer;
 }
 
 .option-button.selected {

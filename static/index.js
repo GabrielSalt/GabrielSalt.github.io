@@ -68,14 +68,15 @@ onresize = (event) => {
     if (getPathFromURL() == "" || getPathFromURL() == "index" ) {
         centreSize()
     }
-    url = window.location.href
-    if (screen.width / screen.height > 1){
+    if (window.innerWidth / window.innerHeight > 1){
         if (getPathFromURL() == "mobile") {
+            console.log('mobile one')
             window.location.href = "index.html"
         }
     }
-    if (screen.width / screen.height <= 1){
+    if (window.innerWidth / window.innerHeight <= 1){
         if (getPathFromURL() == "index" || getPathFromURL() == "") {
+            console.log('home one')
             window.location.href = "mobile.html"
         }
     }

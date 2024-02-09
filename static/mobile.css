@@ -38,9 +38,8 @@ html, body {
     position: relative;
     width: 90%;
     height: auto;
+    max-height: 90%;
     aspect-ratio : 1.2 / 1;
-    padding-bottom: 20%;
-    top: 5%;
 }
 
 .subPageLeft {

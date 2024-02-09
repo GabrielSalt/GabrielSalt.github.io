@@ -27,8 +27,16 @@ html, body {
     grid-template-columns: 100%;
 }
 
+_::-webkit-full-page-media, _:future, :root .pages {
+    width: 100%
+}
+
 .pagesLeft {
     justify-self: right;
+}
+
+.pagesRight {
+    justify-self: left
 }
 
 .subPage {
@@ -52,6 +60,12 @@ html, body {
     outline: solid 8px rgba(180, 0, 180, 1);
     vertical-align: middle;
 }
+
+@-moz-document url-prefix() {
+    .subPageLeft{
+      justify-self: right;
+    }
+  }  
 
 #centre {
     overflow: hidden;

@@ -22,23 +22,41 @@ function hideOverlay (e) {
 function centreButtons(e) {
     var box = document.querySelector('#centreimg')
     
-    if (e.offsetX / box.offsetWidth > 79 / 441 && e.offsetX / box.offsetWidth < 175 / 441){
-        if (e.offsetY / box.offsetHeight > 10 / 630 && e.offsetY / box.offsetHeight < 110 / 630){
+    // 235, 0 -> 540, 300
+    if (e.offsetX / box.offsetWidth > 235 / 1366 && e.offsetX / box.offsetWidth < 540 / 1366){
+        if (e.offsetY / box.offsetHeight > 0 / 1894 && e.offsetY / box.offsetHeight < 300 / 1894){
             console.log('about')
         }
     }
 
-    if (e.offsetX / box.offsetWidth > 156 / 441 && e.offsetX / box.offsetWidth < 211 / 441){
-        if (e.offsetY / box.offsetHeight > 389 / 630 && e.offsetY / box.offsetHeight < 526 / 630){
+    // 915, 1675 -> 1280, 1840
+    if (e.offsetX / box.offsetWidth > 915 / 1366 && e.offsetX / box.offsetWidth < 1280 / 1366){
+        if (e.offsetY / box.offsetHeight > 1675 / 1894 && e.offsetY / box.offsetHeight < 1840 / 1894){
+            console.log('updates')
+        }
+    }
+
+    // 15, 1655 -> 345, 1850
+    if (e.offsetX / box.offsetWidth > 15 / 1366 && e.offsetX / box.offsetWidth < 345 / 1366){
+        if (e.offsetY / box.offsetHeight > 1655 / 1894 && e.offsetY / box.offsetHeight < 1850 / 1894){
+            overlay("static/images/Philanthropy.png")
+        }
+    }
+
+    // 480, 1170 -> 650, 1600
+    if (e.offsetX / box.offsetWidth > 480 / 1366 && e.offsetX / box.offsetWidth < 650 / 1366){
+        if (e.offsetY / box.offsetHeight > 1170 / 1894 && e.offsetY / box.offsetHeight < 1600 / 1894){
             window.location.href = '/contact.html';
         }
     }
 
-    if (e.offsetX / box.offsetWidth > 299 / 441 && e.offsetX / box.offsetWidth < 415 / 441){
-        if (e.offsetY / box.offsetHeight > 552 / 630 && e.offsetY / box.offsetHeight < 603 / 630){
+    // 875, 795 -> 1285, 980
+    if (e.offsetX / box.offsetWidth > 875 / 1366 && e.offsetX / box.offsetWidth < 1285 / 1366){
+        if (e.offsetY / box.offsetHeight > 795 / 1894 && e.offsetY / box.offsetHeight < 980 / 1894){
             window.location.href = '/gallery.html';
         }
     }
+
 }
 
 onload = (event) => {
@@ -47,7 +65,6 @@ onload = (event) => {
 }
 
 onresize = (event) => {
-    console.log(getPathFromURL())
     if (getPathFromURL() == "" || getPathFromURL() == "index" ) {
         centreSize()
     }
@@ -84,6 +101,13 @@ function getPathFromURL() {
 function centreSize () {
     centreImg = document.getElementById('centreimg')
     container = document.getElementById('container')
+    if ((window.innerWidth / window.innerHeight > 1250/934)) {
+        container.style.background = "url('static/images/backgroundmaybeidk.png') no-repeat"
+            container.style.backgroundSize = "100% 100%"
+    }
+    else {
+        container.style.background = 'magenta'
+    }
         if ((window.innerWidth / window.innerHeight > 1200/934)) {
             const newWidth = ((window.innerWidth / window.innerHeight) * 934)
             const pagesWidth = ((newWidth - 670) / 2) / newWidth * 100
@@ -92,8 +116,6 @@ function centreSize () {
             const pages = document.getElementsByClassName('pages')
             pages[0].style.width = "fit-content"
             pages[1].style.width = "fit-content"
-            container.style.background = "url('static/images/backgroundmaybeidk.png') no-repeat"
-            container.style.backgroundSize = "100% 100%"
         }
 
         else {
@@ -107,7 +129,7 @@ function centreSize () {
             const pages = document.getElementsByClassName('pages')
             pages[0].style.width = "100%"
             pages[1].style.width = "100%"
-            container.style.background = 'magenta'
+            
         }
     document.querySelector('.subPage').clientHeight = document.querySelector('.subPage').clientWidth
 };

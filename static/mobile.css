@@ -99,17 +99,17 @@ html, body {
     right: 5%;
     align-self: center;
     border-radius: 50px;
-    
 }
 
 #overlayImage {
-    height: 100%;
-    width: auto;
+    width: 90%;
+    height: auto;
     background-color: white;
     position: absolute;
-    left: 15%;
-    right: 15%;
-    border-radius: 40px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    top: 50%;
+    border-radius: 10px;
 }
 
 #tint {

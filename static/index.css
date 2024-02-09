@@ -86,12 +86,14 @@ html, body {
     right: 5%;
     width: 90%;
     height: 90%;
-    align-self: center;
-    border-radius: 50px;
-    
+    justify-content: center;
+    border-radius: 50px; 
 }
 
 #overlayImage {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     height: 100%;
     width: auto;
     background-color: white;

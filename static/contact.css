@@ -6,10 +6,13 @@ body {
     color: black;
 }
 
+
+
 body, html{
     margin: 0;
     padding: 0;
-    height: 100%;
+    min-height: 100%;
+    width: 100%;
 }
 
 
@@ -28,15 +31,30 @@ h1 {
 #home {
     color: black;
     position: absolute;
-    top: 5%;
-    left: 90%;
-    height: 5%;
-    width: 10%;
+    right: 2%;
+    top: 2%;
     border: 0px;
-    transform: translateX(-50%);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Geneva, Tahoma, sans-serif;
-    font-size: 36px;
+    font-size: 30px;
     background: none;
+}
+
+@media (max-width: 600px) {
+    #home {
+        color: black;
+        position: absolute;
+        right: 2%;
+        top: 2%;
+        border: 0px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Geneva, Tahoma, sans-serif;
+        font-size: 24px;
+        background: none;
+    }
+    
+    body {
+        background-image: url('images/contactmobilebackground.png');
+        background-size: 100% 100%;
+    }
 }
 
 .options {

@@ -1,7 +1,3 @@
-@media (max-width: 600px) {
-
-}
-
 html, body {
     background-color: white;
     background-size: contain;
@@ -58,7 +54,7 @@ html, body {
     outline: none;
 }
 
-  .carousel-inner > .carousel-item {
+.carousel-inner > .carousel-item {
     vertical-align: center;
     height: 80vh;
     width: auto;

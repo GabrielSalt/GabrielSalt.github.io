@@ -103,8 +103,8 @@ html, body {
 }
 
 #overlayImage {
-    width: 90%;
-    height: auto;
+    width: 100%;
+    aspect-ratio: 1, 1.2;
     background-color: white;
     position: absolute;
     left: 50%;

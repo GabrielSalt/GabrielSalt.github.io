@@ -14,7 +14,7 @@
 </head>
 <body>
     <div id="container">
-        <div class="pages column">
+        <div class="pages pagesLeft column">
             <div id="Hats" class="subPage subPageLeft" onclick="overlay(this.children[0].getAttribute('src'))">
                     <image name="Hats" src="static/images/Hats.png" class="subImage"></image>
             </div>
@@ -29,14 +29,14 @@
             </div>
         </div> 
         <div id="centre" class="column">
-                <img id="centreimg" src="static/images/shillingmaybe.png" onclick="centreButtons(event)"/>
+                <img id="centreimg" src="static/images/centre.png" onclick="centreButtons(event)"/>
         </div>
-        <div class=" pages column" hidden="true">
+        <div class="pages column">
             <div id="Music" class="subPage subPageRight" onclick="overlay(this.children[0].getAttribute('src'))">
                     <image name="Music" src="static/images/Music.png" class="subImage"></image>
             </div>
-            <div id="Philanthropy" class="subPage subPageRight" onclick="overlay(this.children[0].getAttribute('src'))">
-                    <image name="Philanthropy" src="static/images/Philanthropy.png" class="subImage"></image>
+            <div id="Fashion" class="subPage subPageRight" onclick="overlay(this.children[0].getAttribute('src'))">
+                    <image name="Fashion" src="static/images/Fashion.png" class="subImage"></image>
             </div>
             <div id="LAD" class="subPage subPageRight" onclick="overlay(this.children[0].getAttribute('src'))">
                     <image name="LAD" src="static/images/LAD.png" class="subImage"></image>
@@ -46,8 +46,7 @@
             </div>
         </div> 
     </div>
-    <div id="tint" onclick="hideOverlay(event)">
-        </div>
+    <div id="tint" hidden="true" onclick="hideOverlay(event)"></div>
     <div id="overlay" hidden="true" onclick="hideOverlay(event)">
         <image name='overlayImage' id="overlayImage" hidden="true"><image/>
     </div>

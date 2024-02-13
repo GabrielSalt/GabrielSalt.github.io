@@ -10,13 +10,13 @@ function overlay (imagesrc) {
 }
 
 function hideOverlay (e) {
-    var overlayElem = document.getElementById('overlay')
-    var overlayImage = document.getElementById('overlayImage')
-    var tint = document.getElementById('tint')
+    document.getElementById('overlay').hidden = true
+    document.getElementById('overlayImage').hidden = true
+    document.getElementById('tint').hidden = true
+    document.getElementById('overlayGallery').hidden = true
+    document.getElementById('overlayAbout').hidden = true
+    document.getElementById('overlayUpdates').hidden = true
 
-    overlayElem.hidden = true
-    overlayImage.hidden = true
-    tint.hidden = true
 }
 
 function centreButtons(e) {
@@ -25,14 +25,14 @@ function centreButtons(e) {
     // 235, 0 -> 540, 300
     if (e.offsetX / box.offsetWidth > 235 / 1366 && e.offsetX / box.offsetWidth < 540 / 1366){
         if (e.offsetY / box.offsetHeight > 0 / 1894 && e.offsetY / box.offsetHeight < 300 / 1894){
-            console.log('about')
+            overlayVideo()
         }
     }
 
     // 915, 1675 -> 1280, 1840
     if (e.offsetX / box.offsetWidth > 915 / 1366 && e.offsetX / box.offsetWidth < 1280 / 1366){
         if (e.offsetY / box.offsetHeight > 1675 / 1894 && e.offsetY / box.offsetHeight < 1840 / 1894){
-            console.log('updates')
+            overlayUpdates()
         }
     }
 
@@ -53,7 +53,7 @@ function centreButtons(e) {
     // 875, 795 -> 1285, 980
     if (e.offsetX / box.offsetWidth > 875 / 1366 && e.offsetX / box.offsetWidth < 1285 / 1366){
         if (e.offsetY / box.offsetHeight > 795 / 1894 && e.offsetY / box.offsetHeight < 980 / 1894){
-            window.location.href = '/gallery.html';
+            overlayGallery()
         }
     }
 
@@ -134,3 +134,33 @@ function centreSize () {
         }
     document.querySelector('.subPage').clientHeight = document.querySelector('.subPage').clientWidth
 };
+
+function overlayVideo() {
+    document.getElementById('overlayAbout').hidden = false
+    document.getElementById('tint').hidden = false
+}
+
+function hideOverlayVideo() {
+    document.getElementById('overlayAbout').hidden = true
+    document.getElementById('tint').hidden = true
+}
+
+function overlayGallery() {
+    document.getElementById('overlayGallery').hidden = false
+    document.getElementById('tint').hidden = false
+}
+
+function hideOverlayGallery() {
+    document.getElementById('overlayGallery').hidden = true
+    document.getElementById('tint').hidden = true
+}
+
+function overlayUpdates() {
+    document.getElementById('overlayUpdates').hidden = false
+    document.getElementById('tint').hidden = false
+}
+
+function hideOverlayUpdates() {
+    document.getElementById('overlayUpdates').hidden = true
+    document.getElementById('tint').hidden = true
+}

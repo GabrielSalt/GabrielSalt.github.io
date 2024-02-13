@@ -47,8 +47,23 @@
         </div> 
     </div>
     <div id="tint" hidden="true" onclick="hideOverlay(event)"></div>
-    <div id="overlay" hidden="true" onclick="hideOverlay(event)">
+    <div class="overlay" id='overlay' hidden="true" onclick="hideOverlay(event)">
         <image name='overlayImage' id="overlayImage" hidden="true"><image/>
+    </div>
+    <div id="overlayAbout" class="overlay overlayVideo" hidden="true" onclick="hideOverlayVideo()">
+        <iframe id="overlayAbout" class='overlayVideo' src='https://www.youtube.com/embed/mZ-yhg2IIQE?autoplay=1'></iframe>
+    </div>
+    <div id='overlayGallery' class="overlay overlayVideo" hidden="true" onclick="hideOverlayGallery()">
+        <iframe id='overlayGallery' class='overlayVideo' src='https://www.youtube.com/embed/j_zTpEI_8ig?autoplay=1'></iframe>
+    </div>
+    <div id='overlayUpdates' class="overlay" hidden="true">
+        <form action="https://api.staticforms.xyz/submit" method="post">
+                <label for="email">Email</label>
+                <input type="email" id="email" name='email' placeholder="Enter your email">
+                <input type="hidden" name="accessKey" value="a589219f-42dd-4cac-88d9-dd05a37872af">
+                <input type="hidden" name="redirectTo" value="https://gabrielsalt.github.io">
+                <button type="submit" class='submit' value='submit!!' onclick="submitForm()">Submit</button>
+        </form>
     </div>
     <script src="static/index.js"></script>
 </body>

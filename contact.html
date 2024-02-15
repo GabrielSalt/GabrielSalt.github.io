@@ -16,8 +16,8 @@
             <button id="pressBtn" class="option-button button" onclick="showInputs('press')">Press / Media</button>
             <button id="clientsBtn" class="option-button button" onclick="showInputs('clients')">Clients / Commission</button>
         </div>
-        <form action="https://api.staticforms.xyz/submit" method="post" onsubmit="return validateForm()">
             <div id="studentInputs" class="hidden inputs">
+            <form id='myForm1' action="https://api.staticforms.xyz/submit" method="post" onsubmit="return validateForm(1)">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" placeholder="Enter your name">
     
@@ -25,16 +25,18 @@
             <input type="email" id="email" name='email' placeholder="Enter your email">
     
             <label for="longText">Describe your area of work </label>
-            <textarea id="longText" name="@description" placeholder="..." rows="5"></textarea>
+            <textarea id="longText1" name="@description" placeholder="..." rows="5"></textarea>
 
             <label for="longText">What is your enquiry?</label>
-            <textarea id="longText" name="@enquiry" placeholder="Add as much information as possible..." rows="10"></textarea>
+            <textarea id="longText2" name="@enquiry" placeholder="Add as much information as possible..." rows="10"></textarea>
             <input type="hidden" name="accessKey" value="a589219f-42dd-4cac-88d9-dd05a37872af">
-            <input type="hidden" name="redirectTo" value="https://example.com/contact/success">
-            <button type="submit" class='submit' value='submit!!' onclick="submitForm()">Submit</button>
+            <input type="hidden" name="redirectTo" value="https://gabrielsalt.github.io">
+            <button type="submit" class='submit' value='submit!!'>Submit</button>
+            </form>
         </div>
     
         <div id="pressInputs" class="hidden inputs">
+            <form id='myForm2' action="https://api.staticforms.xyz/submit" method="post" onsubmit="return validateForm(2)">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" placeholder="Enter your name">
     
@@ -56,10 +58,13 @@
             <label for="longText">Enquiry</label>
             <textarea id="longText" name="@description" placeholder="Add as much information as possible..." rows="6"></textarea>
             <input type="hidden" name="accessKey" value="a589219f-42dd-4cac-88d9-dd05a37872af">
-            <button type="submit" class='submit' value='submit!!' onclick="submitForm()">Submit</button>
+            <input type="hidden" name="redirectTo" value="https://gabrielsalt.github.io">
+            <button type="submit" class='submit' value='submit!!'>Submit</button>
+            </form>
         </div>
     
         <div id="clientsInputs" class="hidden inputs">
+            <form id='myForm3' action="https://api.staticforms.xyz/submit" method="post" onsubmit="return validateForm(3)">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" placeholder="Enter your name">
     
@@ -81,9 +86,10 @@
             <label for="longText">How can we work together?</label>
             <textarea id="longText" name="@description" placeholder="Add as much information as possible..." rows="6"></textarea>
             <input type="hidden" name="accessKey" value="a589219f-42dd-4cac-88d9-dd05a37872af">
-            <button type="submit" class='submit' value='submit!!' onclick="submitForm()">Submit</button>
+            <input type="hidden" name="redirectTo" value="https://gabrielsalt.github.io">
+            <button type="submit" class='submit' value='submit!!'>Submit</button>
+            </form>
         </div>
-        </form>
         <button onclick="location.href = '/';" id="home" class="btn btn-primary">home</button>
     </div>
 <script src="static/contact.js"></script>

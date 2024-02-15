@@ -11,8 +11,8 @@ function overlay (imagesrc) {
 
 function hideOverlay (e) {
     if (document.getElementById('overlayImage').getAttribute('src').includes('Music')) {
-        if (e.offsetX > 40 && e.offsetX < 135 & e.offsetY > 350 & e.offsetY < 450){
-            console.log('MUSIC!')
+        if (e.offsetX > 40 && e.offsetX < 140 & e.offsetY > 350 & e.offsetY < 450){
+            window.open('https://www.youtube.com/watch?v=flv6BGBM61I&list=PLsXT5YSKmoLD3iZlOv7rv3KsFKCVZBHBY')
             return
         }
     }

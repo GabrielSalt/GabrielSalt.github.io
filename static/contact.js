@@ -18,14 +18,13 @@ function showInputs(option) {
     selectedButton.setAttribute('aria-selected', true);
 }
 
-function validateForm() {
+function validateForm(n) {
     // Get form elements
-    var form = document.getElementById("myForm");
+    var form = document.getElementById(`myForm${n}`);
     var inputs = form.getElementsByTagName("input");
 
     // Check if all fields are filled
     for (var i = 0; i < inputs.length; i++) {
-        console.log(inputs[i])
       if (inputs[i].type !== "submit" && inputs[i].value === "") {
         alert("Please fill out all fields");
         return false; // Prevent form submission

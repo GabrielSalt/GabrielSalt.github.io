@@ -113,6 +113,52 @@ html, body {
     border-radius: 10px;
 }
 
+.overlayVideo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 90%;
+    height: 50%;
+}
+
+#overlayUpdates {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) ;
+    width: 60%;
+    height: fit-content;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid magenta;
+}
+
+input {
+    background: white;
+    color: black;
+    width: 100%;
+    border: 1px solid magenta;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-radius: 5px;
+}
+
+button {
+    background: black;
+    color: white;
+    border: 1px solid magenta;
+    margin-top: 2%;
+    border-radius: 5px;
+    width: 100%;
+}
+
+label, input, button {
+    font-family: Tahoma
+}
+
+
 #tint {
     position: absolute;
     top: 0;

@@ -10,6 +10,18 @@ function overlay (imagesrc) {
 }
 
 function hideOverlay (e) {
+    if (document.getElementById('overlayImage').getAttribute('src').includes('Music')) {
+        if (e.offsetX > 40 && e.offsetX < 135 & e.offsetY > 350 & e.offsetY < 450){
+            console.log('MUSIC!')
+            return
+        }
+    }
+    else if (document.getElementById('overlayImage').getAttribute('src').includes('LAD')) {
+        if (e.offsetX > 140 && e.offsetX < 180 & e.offsetY > 550 & e.offsetY < 660){
+            window.open('https://shilling.space')
+            return
+        }
+    }
     document.getElementById('overlay').hidden = true
     document.getElementById('overlayImage').hidden = true
     document.getElementById('tint').hidden = true

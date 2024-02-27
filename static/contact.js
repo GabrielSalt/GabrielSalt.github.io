@@ -7,6 +7,19 @@ function showInputs(option) {
     var selectedInputs = document.getElementById(option + "Inputs");
     selectedInputs.classList.remove('hidden');
 
+    console.log(option)
+    if (option == 'student') {
+      document.getElementById('body').style.backgroundImage = `url("static/images/student.png")`
+    }
+    else if (option == 'clients') {
+      document.getElementById('body').style.backgroundImage = `url("static/images/clients.png")`
+    }
+    else {
+      document.getElementById('body').style.backgroundImage = "url('static/images/press.png')"
+    }
+
+    document.getElementsByClassName('container')[0].style.top = "5%"
+
     document.querySelectorAll('.option-button').forEach(function(button) {
         button.classList.remove('selected');
         button.setAttribute('aria-selected', false);

@@ -11,7 +11,8 @@ function overlay (imagesrc) {
 
 function hideOverlay (e) {
     if (document.getElementById('overlayImage').getAttribute('src').includes('Music')) {
-        if (e.offsetX > 40 && e.offsetX < 140 & e.offsetY > 350 & e.offsetY < 450){
+        d = document.getElementById('overlayImage')
+        if (e.offsetX / d.offsetWidth > 60 / 1075 && e.offsetX / d.offsetWidth < 150 / 1075 & e.offsetY / d.offsetHeight > 330 / 850 & e.offsetY / d.offsetHeight < 505 / 850){
             window.open('https://www.youtube.com/watch?v=flv6BGBM61I&list=PLsXT5YSKmoLD3iZlOv7rv3KsFKCVZBHBY')
             return
         }

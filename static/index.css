@@ -95,19 +95,20 @@ _::-webkit-full-page-media, _:future, :root .pages {
 
 .overlay {
     position: absolute;
-    top:   5%;
-    bottom:5%;
-    left:  5%;
-    right: 5%;
     width: 90%;
     height: 90%;
     justify-content: center;
     border-radius: 50px; 
+    top: 5%;
+    bottom: 5%;
+    left: 5%;
+    right: 5%;
 }
 
 #overlayImage {
     position: absolute;
     left: 50%;
+    top: 0%;
     transform: translateX(-50%);
     height: 100%;
     width: auto;
@@ -150,11 +151,12 @@ _::-webkit-full-page-media, _:future, :root .pages {
 input {
     background: white;
     color: black;
-    width: 100%;
+    width: 50%;
     border: 1px solid magenta;
     margin-top: 2%;
     margin-bottom: 2%;
     border-radius: 5px;
+    font-size: 24px;
 }
 
 button {
@@ -163,11 +165,15 @@ button {
     border: 1px solid magenta;
     margin-top: 2%;
     border-radius: 5px;
-    width: 100%;
+    width: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
 }
 
 label, input, button {
-    font-family: Tahoma
+    font-family: Tahoma;
+    font-size: 24px;
 }
 
 .ds {

@@ -1,25 +1,23 @@
-function overlay (imagesrc) { 
-    var overlayElem = document.getElementById('overlay')
-    var overlayImage = document.getElementById('overlayImage')
-    var tint = document.getElementById('tint')
-
-    overlayElem.hidden = false
-    overlayImage.hidden = false
-    overlayImage.src = imagesrc
-    tint.hidden = false
+function overlay(imagesrc) { 
+    document.getElementById('overlay').hidden = false
+    document.getElementById('overlayImage').src = imagesrc
+    document.getElementById('overlayImage').hidden = false
+    document.getElementById('tint').hidden = false
 }
 
 function hideOverlay (e) {
-    if (document.getElementById('overlayImage').getAttribute('src').includes('Music')) {
-        d = document.getElementById('overlayImage')
+    d = document.getElementById('overlayImage')
+    if (d.getAttribute('src').includes('Music')) {
         if (e.offsetX / d.offsetWidth > 60 / 1075 && e.offsetX / d.offsetWidth < 150 / 1075 & e.offsetY / d.offsetHeight > 330 / 850 & e.offsetY / d.offsetHeight < 505 / 850){
             window.open('https://www.youtube.com/watch?v=flv6BGBM61I&list=PLsXT5YSKmoLD3iZlOv7rv3KsFKCVZBHBY')
             return
         }
     }
-    else if (document.getElementById('overlayImage').getAttribute('src').includes('LAD')) {
-        if (e.offsetX > 140 && e.offsetX < 180 & e.offsetY > 550 & e.offsetY < 660){
-            window.open('https://shilling.space')
+    else if (d.getAttribute('src').includes('LAD')) {
+        if (e.offsetX / d.offsetWidth > 100 / 1075 && e.offsetX / d.offsetWidth < 240 / 1075 & e.offsetY / d.offsetHeight > 550 / 850 & e.offsetY / d.offsetHeight < 720 / 850){
+            document.getElementById('overlayImage').hidden = true
+            console.log('DOING IT')
+            showOverlay('lad')
             return
         }
     }
@@ -29,7 +27,14 @@ function hideOverlay (e) {
     document.getElementById('overlayGallery').hidden = true
     document.getElementById('overlayAbout').hidden = true
     document.getElementById('overlayUpdates').hidden = true
-
+    document.getElementById('overlaylad').hidden = true
+ 
+    var iframes = document.getElementsByTagName("iframe");
+    if (iframes != null) {
+        for (var i = 0; i < iframes.length; i++) {
+            iframes[i].src = iframes[i].src; //causes a reload so it stops playing, music, video, etc.
+        }
+    }
 }
 
 function centreButtons(e) {
@@ -38,14 +43,14 @@ function centreButtons(e) {
     // 235, 0 -> 540, 300
     if (e.offsetX / box.offsetWidth > 235 / 1366 && e.offsetX / box.offsetWidth < 540 / 1366){
         if (e.offsetY / box.offsetHeight > 0 / 1894 && e.offsetY / box.offsetHeight < 300 / 1894){
-            overlayVideo()
+            showOverlay('About')
         }
     }
 
     // 915, 1675 -> 1280, 1840
     if (e.offsetX / box.offsetWidth > 915 / 1366 && e.offsetX / box.offsetWidth < 1280 / 1366){
         if (e.offsetY / box.offsetHeight > 1675 / 1894 && e.offsetY / box.offsetHeight < 1840 / 1894){
-            overlayUpdates()
+            showOverlay('Updates')
         }
     }
 
@@ -66,7 +71,7 @@ function centreButtons(e) {
     // 875, 795 -> 1285, 980
     if (e.offsetX / box.offsetWidth > 875 / 1366 && e.offsetX / box.offsetWidth < 1285 / 1366){
         if (e.offsetY / box.offsetHeight > 795 / 1894 && e.offsetY / box.offsetHeight < 980 / 1894){
-            overlayGallery()
+            showOverlay('Gallery')
         }
     }
 
@@ -83,13 +88,11 @@ onresize = (event) => {
     }
     if (window.innerWidth / window.innerHeight > 1){
         if (getPathFromURL() == "mobile") {
-            console.log('mobile one')
             window.location.href = "index.html"
         }
     }
     if (window.innerWidth / window.innerHeight <= 1){
         if (getPathFromURL() == "index" || getPathFromURL() == "") {
-            console.log('home one')
             window.location.href = "mobile.html"
         }
     }
@@ -148,32 +151,7 @@ function centreSize () {
     document.querySelector('.subPage').clientHeight = document.querySelector('.subPage').clientWidth
 };
 
-function overlayVideo() {
-    document.getElementById('overlayAbout').hidden = false
+function showOverlay(name) {
+    document.getElementById(`overlay${name}`).hidden = false
     document.getElementById('tint').hidden = false
-}
-
-function hideOverlayVideo() {
-    document.getElementById('overlayAbout').hidden = true
-    document.getElementById('tint').hidden = true
-}
-
-function overlayGallery() {
-    document.getElementById('overlayGallery').hidden = false
-    document.getElementById('tint').hidden = false
-}
-
-function hideOverlayGallery() {
-    document.getElementById('overlayGallery').hidden = true
-    document.getElementById('tint').hidden = true
-}
-
-function overlayUpdates() {
-    document.getElementById('overlayUpdates').hidden = false
-    document.getElementById('tint').hidden = false
-}
-
-function hideOverlayUpdates() {
-    document.getElementById('overlayUpdates').hidden = true
-    document.getElementById('tint').hidden = true
 }

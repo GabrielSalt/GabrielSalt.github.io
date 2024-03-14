@@ -33,6 +33,7 @@ _::-webkit-full-page-media, _:future, :root .pages {
 
 .pagesLeft {
     justify-self: right;
+    -webkit-justify-self: right;
 }
 
 .pagesRight {

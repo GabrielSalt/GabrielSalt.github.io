@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato">
     <link rel="stylesheet" href="static/contact.css">
 </head>
+
 <body id="body">
+<div id="bodyContainer">
     <div class="container">
         <h1 style="font-size: 40px;">Contact</h1>
         <div class="options">
@@ -91,8 +93,12 @@
             </form>
         </div>
     </div>
-    <button onclick="location.href = '/';" id="home" class="btn btn-primary">home</button>
-    <image id='addressImg' name="addressImg" src="static/images/address.png"></image>
+    <div id="imageContainer">
+        <image id='addressImg' name="addressImg" src="static/images/address.png"></image>
+    </div>
+</div>
+<button onclick="location.href = '/';" id="home" class="btn btn-primary">home</button>
+    
 <script src="static/contact.js"></script>
 </body>
 </html>

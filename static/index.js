@@ -7,6 +7,7 @@ function overlay(imagesrc) {
 
 function hideOverlay (e) {
     d = document.getElementById('overlayImage')
+    console.log(d)
     if (d.getAttribute('src').includes('Music')) {
         if (e.offsetX / d.offsetWidth > 60 / 1075 && e.offsetX / d.offsetWidth < 150 / 1075 & e.offsetY / d.offsetHeight > 330 / 850 & e.offsetY / d.offsetHeight < 505 / 850){
             window.open('https://www.youtube.com/watch?v=flv6BGBM61I&list=PLsXT5YSKmoLD3iZlOv7rv3KsFKCVZBHBY')

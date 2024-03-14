@@ -56,6 +56,10 @@ h1 {
         background-image: url('images/contactmobilebackground.png');
         background-size: 100% 100%;
     }
+
+    #addressImg {
+        width: 50%;
+    }
 }
 
 .options {
@@ -132,4 +136,18 @@ input, textarea {
 
 .hidden {
     display: none;
+}
+
+#addressImg {
+    position: absolute;
+    left: 50%;
+    top: 65%;
+    transform: translateX(-50%) translateY(-50%);
+    aspect-ratio: 1.5,1;
+}
+
+@media (min-width: 600px) {
+    #addressImg {
+        width: 300px;
+    }
 }

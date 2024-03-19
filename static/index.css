@@ -150,6 +150,7 @@ _::-webkit-full-page-media, _:future, :root .pages {
 }
 
 input {
+    align-self: center;
     background: white;
     color: black;
     width: 70%;

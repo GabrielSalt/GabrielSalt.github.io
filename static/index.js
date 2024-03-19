@@ -6,6 +6,7 @@ function overlay(imagesrc) {
 }
 
 function hideOverlay (e) {
+
     d = document.getElementById('overlayImage')
 
     if (d.getAttribute('src').includes('Hats')) {
@@ -37,7 +38,7 @@ function hideOverlay (e) {
        }
     }
     else if (d.getAttribute('src').includes('Fashion')) {
-        if (e.offsetX / d.offsetWidth > 70 / 957 && e.offsetX / d.offsetWidth < 205 / 957 & e.offsetY / d.offsetHeight > 400 / 762 & e.offsetY / d.offsetHeight < 605 / 762){
+        if (e.offsetX / d.offsetWidth > 980 / 1155 && e.offsetX / d.offsetWidth < 1110 / 1155 & e.offsetY / d.offsetHeight > 590 / 923 & e.offsetY / d.offsetHeight < 710 / 923){
             window.location.href = '/contact.html'
             return
        }

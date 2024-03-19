@@ -7,8 +7,59 @@ function overlay(imagesrc) {
 
 function hideOverlay (e) {
     d = document.getElementById('overlayImage')
-    console.log(d)
-    if (d.getAttribute('src').includes('Music')) {
+
+    if (d.getAttribute('src').includes('Hats')) {
+        if (e.offsetX / d.offsetWidth > 500 / 957 && e.offsetX / d.offsetWidth < 590 / 957 & e.offsetY / d.offsetHeight > 600 / 762 & e.offsetY / d.offsetHeight < 670 / 762){
+            window.location.href = '/contact.html'
+            return
+       }
+    }
+    else if (d.getAttribute('src').includes('Art')) {
+        if (e.offsetX / d.offsetWidth > 83 / 957 && e.offsetX / d.offsetWidth < 320 / 957 & e.offsetY / d.offsetHeight > 480 / 762 & e.offsetY / d.offsetHeight < 600 / 762){
+            window.location.href = '/contact.html'
+            return
+       }
+    }
+    else if (d.getAttribute('src').includes('Beauty')) {
+        if (e.offsetX / d.offsetWidth > 20 / 957 && e.offsetX / d.offsetWidth < 350 / 957 & e.offsetY / d.offsetHeight > 475 / 762 & e.offsetY / d.offsetHeight < 670 / 762){
+            window.location.href = '/contact.html'
+            return
+       }
+       if (e.offsetX / d.offsetWidth > 538 / 957 && e.offsetX / d.offsetWidth < 655 / 957 & e.offsetY / d.offsetHeight > 585 / 762 & e.offsetY / d.offsetHeight < 680 / 762){
+        window.location.href = '/contact.html'
+        return
+   }
+    }
+    else if (d.getAttribute('src').includes('Jewellery')) {
+        if (e.offsetX / d.offsetWidth > 725 / 957 && e.offsetX / d.offsetWidth < 930 / 957 & e.offsetY / d.offsetHeight > 140 / 762 & e.offsetY / d.offsetHeight < 275 / 762){
+            window.location.href = '/contact.html'
+            return
+       }
+    }
+    else if (d.getAttribute('src').includes('Fashion')) {
+        if (e.offsetX / d.offsetWidth > 70 / 957 && e.offsetX / d.offsetWidth < 205 / 957 & e.offsetY / d.offsetHeight > 400 / 762 & e.offsetY / d.offsetHeight < 605 / 762){
+            window.location.href = '/contact.html'
+            return
+       }
+    }
+    else if (d.getAttribute('src').includes('Philanthropy')) {
+        if (e.offsetX / d.offsetWidth > 610 / 957 && e.offsetX / d.offsetWidth < 825 / 957 & e.offsetY / d.offsetHeight > 470 / 762 & e.offsetY / d.offsetHeight < 590 / 762){
+            window.location.href = '/contact.html'
+            return
+       }
+    }
+    else if (d.getAttribute('src').includes('HST')) {
+        if (e.offsetX / d.offsetWidth > 60 / 957 && e.offsetX / d.offsetWidth < 350 / 957 & e.offsetY / d.offsetHeight > 645 / 762 & e.offsetY / d.offsetHeight < 695 / 762){
+            document.getElementById('overlayImage').hidden = true
+            showOverlay('Updates')
+            return
+        }
+        else if (e.offsetX / d.offsetWidth > 625 / 957 && e.offsetX / d.offsetWidth < 890 / 957 & e.offsetY / d.offsetHeight > 650 / 762 & e.offsetY / d.offsetHeight < 710 / 762){
+            window.location.href = '/contact.html'
+            return
+   }
+    }
+    else if (d.getAttribute('src').includes('Music')) {
         if (e.offsetX / d.offsetWidth > 60 / 1075 && e.offsetX / d.offsetWidth < 150 / 1075 & e.offsetY / d.offsetHeight > 330 / 850 & e.offsetY / d.offsetHeight < 505 / 850){
             window.open('https://www.youtube.com/watch?v=flv6BGBM61I&list=PLsXT5YSKmoLD3iZlOv7rv3KsFKCVZBHBY')
             return
@@ -17,11 +68,20 @@ function hideOverlay (e) {
     else if (d.getAttribute('src').includes('LAD')) {
         if (e.offsetX / d.offsetWidth > 100 / 1075 && e.offsetX / d.offsetWidth < 240 / 1075 & e.offsetY / d.offsetHeight > 550 / 850 & e.offsetY / d.offsetHeight < 720 / 850){
             document.getElementById('overlayImage').hidden = true
-            console.log('DOING IT')
             showOverlay('lad')
             return
         }
+        else if (e.offsetX / d.offsetWidth > 555 / 957 && e.offsetX / d.offsetWidth < 880 / 957 & e.offsetY / d.offsetHeight > 575 / 762 & e.offsetY / d.offsetHeight < 675 / 762){
+            window.location.href = '/contact.html'
+            return
+        }
+        else if (e.offsetX / d.offsetWidth > 665 / 957 && e.offsetX / d.offsetWidth < 890 / 957 & e.offsetY / d.offsetHeight > 160 / 762 & e.offsetY / d.offsetHeight < 360 / 762){
+            window.location.href = '/contact.html'
+            return
+        }
+
     }
+
     document.getElementById('overlay').hidden = true
     document.getElementById('overlayImage').hidden = true
     document.getElementById('tint').hidden = true

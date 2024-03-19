@@ -48,7 +48,7 @@
     </div>
     <div id="tint" hidden="true" onclick="hideOverlay(event)"></div>
     <div class="overlay" id='overlay' hidden="true" onclick="hideOverlay(event)">
-        <image name='overlayImage' id="overlayImage" hidden="true" src="static/images/Art.png"><image/>
+        <image name='overlayImage' id="overlayImage" hidden="true" src="static/images/updates.png"><image/>
     </div>
     <div id="overlayAbout" class="overlay overlayVideo" hidden="true" onclick="hideOverlay()">
         <iframe id="overlayAbout" class='overlayVideo' src='https://www.youtube.com/embed/U_geBHKleYg?enablejsapi=1&version=3&playerapiid=ytplayer&loop=1&playlist=U_geBHKleYg'></iframe>
@@ -61,14 +61,12 @@
     </div>
     <div id='overlayUpdates' class="overlay" hidden="true">
         <form action="https://api.staticforms.xyz/submit" method="post" onsubmit="alert('Email submitted for updates!')">
-                <label for="name">Enter your name: </label>
                 <input type="name" id="name" name='name' placeholder="...">
                 <br>
-                <label for="email">Enter your email for updates: </label>
                 <input type="email" id="email" name='email' placeholder="...">
                 <br>
                 <input type="hidden" name="accessKey" value="8477a1b8-78d7-4746-843f-34deeac59826">
-                <input type="hidden" name="redirectTo" value="https://gabrielsalt.github.io">
+                <input type="hidden" name="redirectTo" value="https://davidshilling.com">
                 <button type="submit" class='submit' value='submit!!' onclick="submitForm()">Submit</button>
         </form>
     </div>

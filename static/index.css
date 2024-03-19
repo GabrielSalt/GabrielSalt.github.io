@@ -17,7 +17,7 @@ html, body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-} 
+}
 
 .pages {
     height:100%;
@@ -131,12 +131,13 @@ _::-webkit-full-page-media, _:future, :root .pages {
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%) ;
-    width: fit-content;
-    height: fit-content;
-    background-color: white;
+    width: 50%;
+    height: auto;
+    background-image: url('images/updates.png');
+    background-repeat: no-repeat;
+    background-size: contain;
     padding: 10px;
     border-radius: 5px;
-    border: 2px solid magenta;
 }
 
 #tint {
@@ -153,27 +154,38 @@ input {
     align-self: center;
     background: white;
     color: black;
-    width: 70%;
+    width: 30%;
     border: 1px solid magenta;
     margin-top: 2%;
     margin-bottom: 2%;
     border-radius: 5px;
-    font-size: 24px;
+    font-size: 18px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 button {
     background: black;
     color: white;
     border: 1px solid magenta;
-    margin-top: 2%;
     border-radius: 5px;
     width: 30%;
     left: 50%;
-    transform: translateX(-50%);
     position: relative;
+    transform: translateX(-50%);
 }
 
-label, input, button {
+#name {
+    position: relative;
+    margin-top: 8%;
+}
+
+#email {
+    position: relative;
+    margin-top: 4.5%;
+}
+
+label, button {
     font-family: Tahoma;
     font-size: 24px;
 }

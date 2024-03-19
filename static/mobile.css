@@ -1,4 +1,3 @@
-
 #container {
         font-family: Arial, sans-serif;
         text-align: center;
@@ -118,46 +117,62 @@ html, body {
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
+    height: 60%;
     width: 90%;
-    height: 50%;
 }
 
 #overlayUpdates {
     position: absolute;
+    width: 90%;
+    height: 30%;
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%) ;
-    width: 60%;
-    height: fit-content;
-    background-color: white;
+    background-image: url('images/updates.png');
+    background-repeat: no-repeat;
+    background-size: contain;
     padding: 10px;
     border-radius: 5px;
-    border: 2px solid magenta;
+    vertical-align: center;
 }
 
 input {
-    background: white;
-    color: black;
-    width: 100%;
-    border: 1px solid magenta;
-    margin-top: 2%;
+    background: black;
+    color: white;
+    width: 40%;
+    border: 1px solid white;
+    margin-top: 1%;
     margin-bottom: 2%;
     border-radius: 5px;
+    font-size: 12px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 button {
     background: black;
     color: white;
     border: 1px solid magenta;
-    margin-top: 2%;
     border-radius: 5px;
-    width: 100%;
+    width: 40%;
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+}
+
+#name {
+    position: relative;
+    margin-top: 6.5%;
+}
+
+#email {
+    position: relative;
+    margin-top: 5%;
 }
 
 label, input, button {
     font-family: Tahoma
 }
-
 
 #tint {
     position: absolute;

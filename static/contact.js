@@ -39,7 +39,7 @@ function validateForm(n) {
 
     // Check if all fields are filled
     for (var i = 0; i < inputs.length; i++) {
-      if (inputs[i].type !== "submit" && inputs[i].value === "") {
+      if (inputs[i].name !== "$telephone" && inputs[i].type !== "submit" && inputs[i].value === "") {
         alert("Please fill out all fields");
         return false; // Prevent form submission
       }

@@ -61,13 +61,17 @@ function hideOverlay (e) {
    }
     }
     else if (d.getAttribute('src').includes('Music')) {
-        if (e.offsetX / d.offsetWidth > 60 / 1075 && e.offsetX / d.offsetWidth < 150 / 1075 & e.offsetY / d.offsetHeight > 330 / 850 & e.offsetY / d.offsetHeight < 505 / 850){
+        if (e.offsetX / d.offsetWidth > 463 / 807 && e.offsetX / d.offsetWidth < 631 / 807 & e.offsetY / d.offsetHeight > 547 / 640 & e.offsetY / d.offsetHeight < 609 / 640){
+            window.location.href = '/contact.html'
+            return
+        }
+        else if (e.offsetX / d.offsetWidth > 60 / 1075 && e.offsetX / d.offsetWidth < 150 / 1075 & e.offsetY / d.offsetHeight > 330 / 850 & e.offsetY / d.offsetHeight < 505 / 850){
             window.open('https://www.youtube.com/watch?v=flv6BGBM61I&list=PLsXT5YSKmoLD3iZlOv7rv3KsFKCVZBHBY')
             return
         }
     }
     else if (d.getAttribute('src').includes('LAD')) {
-        if (e.offsetX / d.offsetWidth > 100 / 1075 && e.offsetX / d.offsetWidth < 240 / 1075 & e.offsetY / d.offsetHeight > 550 / 850 & e.offsetY / d.offsetHeight < 720 / 850){
+        if (e.offsetX / d.offsetWidth > 115 / 804 && e.offsetX / d.offsetWidth < 162 / 804 & e.offsetY / d.offsetHeight > 478/640 & e.offsetY / d.offsetHeight < 610/640){
             document.getElementById('overlayImage').hidden = true
             showOverlay('lad')
             return
@@ -144,6 +148,12 @@ onload = (event) => {
     window.dispatchEvent(new Event('resize'));
 }
 
+window.addEventListener('pageshow', function(event) {
+    if (event.persisted) {
+       this.location.reload()
+    }
+});
+
 onresize = (event) => {
     if (getPathFromURL() == "" || getPathFromURL() == "index" ) {
         centreSize()
@@ -217,3 +227,20 @@ function showOverlay(name) {
     document.getElementById(`overlay${name}`).hidden = false
     document.getElementById('tint').hidden = false
 }
+
+function validateForm(n) {
+    // Get form elements
+    var form = document.getElementById(`myForm${n}`);
+    var inputs = form.getElementsByTagName("input");
+
+    // Check if all fields are filled
+    for (var i = 0; i < inputs.length; i++) {
+      if (inputs[i].type !== "submit" && inputs[i].value === "") {
+        alert("Please fill out all fields");
+        return false; // Prevent form submission
+      }
+    }
+    alert('Email submitted for updates!')
+    // If all fields are filled, submit the form
+    return true;
+  }

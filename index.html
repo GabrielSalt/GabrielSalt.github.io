@@ -3,73 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DAVID SHILLING</title>
-    <link rel="icon" type="image/x-icon" href="static/images/dslogo.png">
+    <title>Sans Operator</title>
     <link rel="stylesheet" href="static/index.css">
-    <script type="text/javascript">
-        if (window.innerWidth / window.innerHeight <= 1) {
-            window.location.href = "mobile.html";
-        }
-        </script>
+    <link rel="stylesheet" href="static/header.css">
+    <link rel="stylesheet" href="static/footer.css">
 </head>
 <body>
-    <div id="container">
-        <div class="pages pagesLeft column">
-            <div id="Hats" class="subPage subPageLeft" onclick="overlay(this.children[0].getAttribute('src'))">
-                    <image name="Hats" src="static/images/Hats.png" class="subImage"></image>
-            </div>
-            <div id="Art" class="subPage subPageLeft" onclick="overlay(this.children[0].getAttribute('src'))">
-                    <image name="Art" src="static/images/Art.png" class="subImage"></image>
-            </div>
-            <div id="Beauty" class="subPage subPageLeft" onclick="overlay(this.children[0].getAttribute('src'))">
-                    <image name="Beauty" src="static/images/Beauty.png" class="subImage"></image>
-            </div>
-            <div id="Jewellery" class="subPage subPageLeft" onclick="overlay(this.children[0].getAttribute('src'))">
-                    <image name="Jewellery" src="static/images/Jewellery.png" class="subImage"></image>
-            </div>
-        </div> 
-        <div id="centre" class="column">
-                <img id="centreimg" src="static/images/centre.png" onclick="centreButtons(event)"/>
+    <div data-include-html="header.html"></div>
+    <div class="main">
+        <div class="info-box">
+            <span class="aboutPrompt"> About this piece ⓘ </span>
+            <p class="aboutText"> The concept of a swarm is...
+            <br>
+            <br>
+            <br>
+                Produced on Touchdesigner, presented for the IC Hackspace 2024 - Winning People's Choice Award
+            </p>
         </div>
-        <div class="pages column">
-            <div id="Music" class="subPage subPageRight" onclick="overlay(this.children[0].getAttribute('src'))">
-                    <image name="Music" src="static/images/Music.png" class="subImage"></image>
-            </div>
-            <div id="Fashion" class="subPage subPageRight" onclick="overlay(this.children[0].getAttribute('src'))">
-                    <image name="Fashion" src="static/images/Fashion.png" class="subImage"></image>
-            </div>
-            <div id="LAD" class="subPage subPageRight" onclick="overlay(this.children[0].getAttribute('src'))">
-                    <image name="LAD" src="static/images/LAD.png" class="subImage"></image>
-            </div>
-            <div id="HST" class="subPage subPageRight" onclick="overlay(this.children[0].getAttribute('src'))"> 
-                    <image name="HST" src="static/images/HST.png" class="subImage"></image>
-            </div>
-        </div> 
     </div>
-    <div id="tint" hidden="true" onclick="hideOverlay(event)"></div>
-    <div class="overlay" id='overlay' hidden="true" onclick="hideOverlay(event)">
-        <image name='overlayImage' id="overlayImage" hidden="true" src="static/images/updates.png"><image/>
-    </div>
-    <div id="overlayAbout" class="overlay overlayVideo" hidden="true" onclick="hideOverlay()">
-        <iframe id="overlayAbout" class='overlayVideo' src='https://www.youtube.com/embed/U_geBHKleYg?enablejsapi=1&version=3&playerapiid=ytplayer&loop=1&playlist=U_geBHKleYg'></iframe>
-    </div>
-    <div id='overlayGallery' class="overlay overlayVideo" hidden="true" onclick="hideOverlay()">
-        <iframe id='overlayGallery' class='overlayVideo' src='https://www.youtube.com/embed/8IFLdSNggRQ?enablejsapi=1&version=3&playerapiid=ytplayer&loop=1&playlist=8IFLdSNggRQ'></iframe>
-    </div>
-    <div id="overlaylad" class="overlay overlayVideo" hidden="true" onclick="hideOverlay()">
-        <iframe id="overlaylad" class='overlayVideo' src='https://www.youtube.com/embed/ZKKNLffCxrw?enablejsapi=1&version=3&playerapiid=ytplayer&loop=1&playlist=ZKKNLffCxrw'></iframe>
-    </div>
-    <div id='overlayUpdates' class="overlay" hidden="true">
-        <form id='myForm4' action="https://api.staticforms.xyz/submit" method="post" onsubmit="return validateForm(4)">
-                <input type="name" id="name" name='name' placeholder="...">
-                <br>
-                <input type="email" id="email" name='email' placeholder="...">
-                <br>
-                <input type="hidden" name="accessKey" value="8477a1b8-78d7-4746-843f-34deeac59826">
-                <input type="hidden" name="redirectTo" value="https://davidshilling.com">
-                <button type="submit" class='submit' value='submit!!' onclick="submitForm()">Submit</button>
-        </form>
-    </div>
-    <script src="static/index.js"></script>
+    <div data-include-html="footer.html"></div>
+    <script src="static/include.js"></script>
+    <script>
+    function toggleMenu() {
+        const menu = document.getElementById('dropdown-menu');
+        if (menu.style.display === 'flex') {
+            menu.style.display = 'none';
+        } else {
+            menu.style.display = 'flex';
+        }
+    }
+    </script>
 </body>
 </html>

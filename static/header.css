@@ -1,0 +1,98 @@
+.header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3D5B3F;
+    color: white;
+    padding: 10px 20px;
+    height: 60px; /* Ensure a fixed height for vertical centering */
+}
+
+.header .title {
+    color: white;
+    text-decoration: none;
+    position: absolute; 
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 28x;
+    text-align: center;
+    vertical-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header .nav-buttons {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    right: 2%;
+}
+
+.header .nav-buttons button {
+    background: none;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px; /* Adjust font size for better visibility */
+    display: none; /* Hide the button by default */
+}
+
+.header .nav-buttons a {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+.header .nav-buttons a:hover {
+    background-color: #183108;
+}
+
+.header .nav-buttons .dropdown-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #3D5B3F;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    z-index: 1;
+    border: 1px solid #ccc;
+}
+
+.header .nav-buttons .dropdown-menu a {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    text-align: right;
+}
+
+.header .nav-buttons .dropdown-menu a:hover {
+    background-color: #183108;
+}
+
+@media screen and (max-width: 768px) {
+    .desktop-nav {
+        display: none; /* Hide desktop navigation on mobile devices */
+    }
+    .mobile-nav {
+        display: flex; /* Show mobile navigation on mobile devices */
+    }
+
+    .header .nav-buttons button {
+        display: block; /* Show the button on mobile devices */
+    }
+    .header .nav-buttons a {
+        display: none; /* Hide the normal links on mobile devices */
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .desktop-nav {
+        display: flex; /* Show desktop navigation on mobile devices */
+    }
+    .mobile-nav {
+        display: none; /* Hide mobile navigation on desktop devices */
+    }
+}

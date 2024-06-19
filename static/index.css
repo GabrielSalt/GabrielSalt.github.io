@@ -1,195 +1,48 @@
-#container {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        margin: 0;
-        padding: 0;
-        display: grid;
-        height: 100vh;
-        grid-template-columns: 30% 40% 30%;
-        grid-template-rows: 100%;
-        background-size: 100% 100%;
-        background-image: url('images/backgroundmaybeidk.png');
-        background-repeat: no-repeat;
-        justify-content: space-between;
-}
-
-html, body {
+body, html {
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    font-family: Arial, sans-serif;
 }
-
-.pages {
-    height:100%;
-    width: fit-content;
-    display: grid;
-    grid-template-rows: 25% 25% 25% 25%;
-    grid-template-columns: 100%;
-}
-
-_::-webkit-full-page-media, _:future, :root .pages {
-    width: 100%
-}
-
-.pagesLeft {
-    justify-self: right;
-    -webkit-justify-self: right;
-}
-
-.pagesRight {
-    justify-self: left
-}
-
-.subPage {
-    justify-content: center;
-    filter: brightness(95%);
+.main {
     position: relative;
-    max-height: 95%;
-    margin-top: auto;
-    margin-bottom: auto;
-    aspect-ratio : 1.2 / 1;
-}
-
-.subPage:hover {
-    filter: brightness(70%)
-}
-
-.subImage {
-    position: relative;
-    max-width: 90%;
-    height: 95%;
-    outline: solid 8px rgba(180, 0, 180, 1);
-    vertical-align: middle;
-}
-
-@-moz-document url-prefix() {
-    .subPageLeft{
-      justify-self: right;
-    }
-  }  
-
-#centre {
-    overflow: hidden;
-    height: 100%;
-}
-
-#centreimg {
-    object-fit: cover;
-    overflow: hidden;
-    height: 100%;
-    width: auto;
-    vertical-align: middle;
-}
-
-#gallery {
-    height:auto;
-    max-width:100%;
-}
-
-#logo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 100%;
-    max-height:100%;
-}
-
-.overlay {
-    position: absolute;
-    width: 90%;
-    height: 90%;
+    height: calc(100vh - 100px);
+    display: flex;
     justify-content: center;
-    border-radius: 50px; 
-    top: 5%;
-    bottom: 5%;
-    left: 5%;
-    right: 5%;
+    align-items: center;
+    background-color: #f0f0f0;
 }
-
-#overlayImage {
+.main .info-box {
     position: absolute;
-    left: 50%;
-    top: 0%;
-    transform: translateX(-50%);
-    height: 100%;
-    width: auto;
-    background-color: white;
-    border-radius: 40px;
-}
-
-.overlayVideo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    width: 90%; 
-    height: 90%;
-}
-
-#overlayUpdates {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%) ;
-    width: 50%;
-    height: auto;
-    background-image: url('images/updates.png');
-    background-repeat: no-repeat;
-    background-size: contain;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
     padding: 10px;
     border-radius: 5px;
+    transition: all 1s ease-in-out;
+}
+.main .info-box:hover {
+    transform: translateY(-5%);
 }
 
-#tint {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-size: 100% 100%;
-    background-color: rgba(0,0,0,0.6);
-    width: 100%;
-    height: 100%;
+.main .info-box .aboutText {
+    display: none;
+}
+  
+  .main .info-box:hover .aboutPrompt {
+    display: none;
+}
+  
+  .main .info-box:hover .aboutText {
+    display: inline;
 }
 
-input {
-    align-self: center;
-    background: white;
-    color: black;
-    width: 30%;
-    border: 1px solid magenta;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    border-radius: 5px;
-    font-size: 18px;
-    left: 50%;
-    transform: translateX(-50%);
+/* Hide scrollbars on all elements */
+* {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
 }
 
-button {
-    background: black;
-    color: white;
-    border: 1px solid magenta;
-    border-radius: 5px;
-    width: 30%;
-    left: 50%;
-    position: relative;
-    transform: translateX(-50%);
-}
-
-#name {
-    position: relative;
-    margin-top: 8%;
-}
-
-#email {
-    position: relative;
-    margin-top: 4.5%;
-}
-
-label, button {
-    font-family: Tahoma;
-    font-size: 24px;
-}
-
-.ds {
-    overflow: hidden;
+*::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
 }

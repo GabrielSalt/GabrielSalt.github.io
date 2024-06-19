@@ -65,3 +65,8 @@ button {
 button:hover {
     background-color: #466b46;
 }
+
+.form-container {
+    position: relative;
+    margin: auto;
+}

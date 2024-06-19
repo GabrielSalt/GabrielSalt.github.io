@@ -9,6 +9,7 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
     background-color: #f0f0f0;
 }
 .main .info-box {
@@ -35,6 +36,16 @@ body, html {
   
   .main .info-box:hover .aboutText {
     display: inline;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill; /* Allows stretching */
+    z-index: -1;
 }
 
 /* Hide scrollbars on all elements */

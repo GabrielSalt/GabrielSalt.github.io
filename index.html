@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="static/index.css">
     <link rel="stylesheet" href="static/header.css">
     <link rel="stylesheet" href="static/footer.css">
+
+    <div data-include-html="font.html"></div>
 </head>
 <body>
     <div data-include-html="header.html"></div>
@@ -17,29 +19,11 @@
                     Check out our art in person.
         </video>
         <div class="info-box">
-            <span class="aboutPrompt"> About this piece ⓘ </span>
-            <p class="aboutText"> We produced a live computer-generated installation that projects unique and ever-changing silhouettes resembling a swarm. <br>
-                This dynamic artwork is not only visually captivating but also incorporates motion capture technology and is audio-reactive,
-                 creating an immersive and interactive experience for the audience. <br>
-                  The constantly evolving visuals respond to the movements of viewers and ambient sounds, making each presentation of the work a singular experience.
-            <br>
-            <br>
-            <br>
-                Produced on Touchdesigner, presented for the IC Hackspace 2024 - Winning People's Choice Award
-            </p>
+            <span class="jost aboutPrompt" onhover=toSwarm()> About this piece &nbsp; ⓘ </span>
+            <a href="2024/swarm.html" class="jost aboutText" onhover=toSwarm()> To The Swarm &nbsp; &nbsp; ➤ </a>
         </div>
     </div>
     <div data-include-html="footer.html"></div>
     <script src="static/include.js"></script>
-    <script>
-    function toggleMenu() {
-        const menu = document.getElementById('dropdown-menu');
-        if (menu.style.display === 'flex') {
-            menu.style.display = 'none';
-        } else {
-            menu.style.display = 'flex';
-        }
-    }
-    </script>
 </body>
 </html>

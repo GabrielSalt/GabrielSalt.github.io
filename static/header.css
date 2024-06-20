@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #3D5B3F;
+    background-color: black;
     color: white;
     padding: 10px 20px;
     height: 60px; /* Ensure a fixed height for vertical centering */
@@ -15,7 +15,7 @@
     position: absolute; 
     left: 50%;
     transform: translateX(-50%);
-    font-size: 28x;
+    font-size: 32px;
     text-align: center;
     vertical-align: center;
     top: 50%;
@@ -86,6 +86,9 @@
     .header .nav-buttons a {
         display: none; /* Hide the normal links on mobile devices */
     }
+    .header .title {
+        font-size: 26px;
+    }
 }
 
 @media screen and (min-width: 769px) {
@@ -95,4 +98,18 @@
     .mobile-nav {
         display: none; /* Hide mobile navigation on desktop devices */
     }
+}
+
+.jost {
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal
+}
+
+.jost-light {
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal
 }

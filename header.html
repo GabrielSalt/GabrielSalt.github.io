@@ -1,17 +1,27 @@
 <div class="header">
-    <a href="index.html" class="title">Sans Operator</a>
+    <a href="index.html" class="title jost">Sans Operator</a>
     <div class="nav-buttons desktop-nav">
-        <a href="portfolio.html">Portfolio</a>
-        <a href="connect.html">Connect</a>
-        <a href="sansoperator.html">Who?</a>
+        <a class='jost' href="portfolio.html">Portfolio</a>
+        <a class='jost' href="connect.html">Connect</a>
+        <a class='jost' href="sansoperator.html">Who?</a>
     </div>
     <div class="nav-buttons mobile-nav">
         <button id="menu-button" onclick="toggleMenu()">☰</button>
         <div id="dropdown-menu" class="dropdown-menu">
-            <a href="portfolio.html">Home</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="connect.html">Connect</a>
-            <a href="sansoperator.html">Who?</a>
+            <a class='jost' href="portfolio.html">Home</a>
+            <a class='jost' href="portfolio.html">Portfolio</a>
+            <a class='jost' href="connect.html">Connect</a>
+            <a class='jost' href="sansoperator.html">Who?</a>
         </div>
     </div>
 </div>
+<script>
+        function toggleMenu() {
+        const menu = document.getElementById('dropdown-menu');
+        if (menu.style.display === 'flex') {
+            menu.style.display = 'none';
+        } else {
+            menu.style.display = 'flex';
+        }
+    }
+</script>

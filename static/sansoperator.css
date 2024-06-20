@@ -17,7 +17,16 @@ body {
 .content {
     display: grid;
     justify-content: center;
-    align-items: center;
     height: calc(100vh - 160px); /* Adjust height considering header and footer */
     padding: 20px;
+    padding-top: 2%;
+}
+
+.about-image {
+    width: 30%;
+    height: auto;
+    object-fit: cover;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }

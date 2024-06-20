@@ -5,7 +5,7 @@ body, html {
     height: 100%;
     overflow-x: hidden; /* Prevent horizontal scrolling */
     font-family: Arial, sans-serif;
-    background-color: black;
+    background-color: #f5f5f5;
     color: #333;
 }
 body {
@@ -13,39 +13,31 @@ body {
     overscroll-behavior: contain; /* Prevent overscroll behavior */
     -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
 }
-.container {
+.connect-container {
     display: flex;
     flex-wrap: wrap;
     margin: 20px;
     justify-content: space-between;
     height: calc(100vh-100px);
+    padding-top: 5%;
+    padding-bottom: 5%;
+    box-sizing: border-box;
+    background-color: #f5f5f5;
 }
 
 .left-column, .right-column {
     flex: 1;
-    padding: 20px;
-    box-sizing: border-box;
-    justify-content: center;
-    align-items: center;
-    background-color: #f5f5f5;
+    padding: 20px 5%;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Optional: Center horizontally */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .backgroundImg {
-    width: 100%;
-}
-
-.left-column {
-    padding: 20px 10%;
-    background-image: "url(/static/images/cheeky.jpg)";
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-.right-column {
-    padding: 20px 10%;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    top: auto;
 }
 
 .form-group {
@@ -82,4 +74,11 @@ button:hover {
 .form-container {
     position: relative;
     margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        display: grid;
+        grid-template-rows: fit-content;
+    }
 }

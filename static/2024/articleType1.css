@@ -6,33 +6,37 @@ body, html {
     overflow-x: hidden; /* Prevent horizontal scrolling */
     font-family: Arial, sans-serif;
 }
-
 .explanation {
     width: 85%;
+    font-size: 12px;
     position: absolute;
-    right: 0;
-    top: 75%;
-    font-size: 14px;
+    top: 95%;
+    left: 20%;
 }
-
+.main {
+    width: 100%;
+    height: 100%;
+}
 .back {
     position: absolute;
     top: 2%;
-    right: 1%;
+    right: 2%;
     font-size: 54px;
     text-decoration: none;
-    color: black;
+    color: white;
 }
-
 .video-background {
-    height: 100%;
     width: 100%;
-    object-fit: fill; /* Allows stretching */
+    height: 75vh; /* 75% of the viewport height */
+    object-fit: cover;
+    display: block;
 }
 
 .main .title {
     font-size: 60px;
     position: absolute;
+    color: black;
+    top: 95%;
 }
 
 @media screen and (max-width:768px){
@@ -56,8 +60,7 @@ body, html {
 
     .main .title {
         font-size: 60px;
-        color: white;
-        left: 3%;
+        color: black;
+        left: 2%;
     }
-    
 }

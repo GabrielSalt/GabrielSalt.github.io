@@ -5,6 +5,7 @@ body, html {
     height: 100%;
     overflow-x: hidden; /* Prevent horizontal scrolling */
     font-family: Arial, sans-serif;
+    background-color: black;
 }
 body {
     overflow-y: scroll; /* Enable vertical scrolling if necessary */
@@ -63,15 +64,14 @@ body {
     width: 100%;
     height: 100%;
     object-fit: fill; /* Allows stretching */
-    z-index: -1;
 }
 
-/* Hide scrollbars on all elements */
-* {
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-}
-
-*::-webkit-scrollbar { 
-    display: none;  /* Safari and Chrome */
+@media screen and (max-width: 768px) {
+    .video-background {
+        height: auto;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }

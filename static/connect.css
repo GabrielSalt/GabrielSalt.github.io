@@ -16,20 +16,18 @@ body {
 .container {
     display: flex;
     flex-wrap: wrap;
-    padding: 20px;
+    margin: 20px;
     justify-content: space-between;
+    height: calc(100vh-100px);
 }
 
 .left-column, .right-column {
     flex: 1;
-    min-width: 300px;
-    width: 90%;
     padding: 20px;
     box-sizing: border-box;
     justify-content: center;
     align-items: center;
     background-color: #f5f5f5;
-    border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 

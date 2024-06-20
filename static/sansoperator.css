@@ -14,25 +14,10 @@ body {
     -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
 }
 
-
 .content {
     display: grid;
     justify-content: center;
     align-items: center;
     height: calc(100vh - 160px); /* Adjust height considering header and footer */
     padding: 20px;
-    width: 60%;
-    border: 1px solid gray;
-    box-shadow: 10px 10px 5px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    background-color: white
-}
-
-.about-box {
-    background-color: black;
-    color: white;
-    width: 60%;
-    padding: 20px;
-    text-align: center;
-    border-radius: 8px;
 }

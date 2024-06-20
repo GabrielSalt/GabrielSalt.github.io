@@ -1,0 +1,63 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    font-family: Arial, sans-serif;
+}
+
+.explanation {
+    width: 85%;
+    position: absolute;
+    right: 0;
+    top: 75%;
+    font-size: 14px;
+}
+
+.back {
+    position: absolute;
+    top: 2%;
+    right: 1%;
+    font-size: 54px;
+    text-decoration: none;
+    color: black;
+}
+
+.video-background {
+    height: 100%;
+    width: 100%;
+    object-fit: fill; /* Allows stretching */
+}
+
+.main .title {
+    font-size: 60px;
+    position: absolute;
+}
+
+@media screen and (max-width:768px){
+    .video-background {
+        width: 75%;
+        height: 50%;
+    }
+    .main .title {
+        color: black;
+        top: 50%;
+        left: auto;
+    }
+    
+}
+
+@media screen and (min-width:769px){
+    .video-background {
+        width: 100%;
+        height: 100%;
+    }
+
+    .main .title {
+        font-size: 60px;
+        color: white;
+        left: 3%;
+    }
+    
+}

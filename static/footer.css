@@ -26,6 +26,7 @@
     padding: 5px 0;
     color: rgba(248, 248, 248, 0.7); /* Off-white with 70% opacity for a greyer look */
     transition: color 0.3s ease-in-out;
+    font-size: 16px;
 }
 
 .footer .column ul li:hover {

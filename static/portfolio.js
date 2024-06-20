@@ -12,32 +12,9 @@ function processCSV(data) {
         return { name, image, year, link };
     });
 
-    generateSidebar(pieces);
     generateMainContent(pieces);
 }
 
-function generateSidebar(pieces) {
-    const sidebar = document.getElementById('sidebar');
-    let currentYear = '';
-
-    pieces.sort((a, b) => b.year - a.year);
-
-    pieces.forEach(piece => {
-        if (piece.year !== currentYear) {
-            currentYear = piece.year;
-            const yearHeader = document.createElement('h2');
-            yearHeader.textContent = currentYear;
-            sidebar.appendChild(yearHeader);
-        }
-        const pieceLink = document.createElement('a');
-        pieceLink.href = piece.link;
-        pieceLink.textContent = piece.name;
-        pieceLink.style.display = 'block';
-        pieceLink.style.color = 'white';
-        pieceLink.style.marginBottom = '10px';
-        sidebar.appendChild(pieceLink);
-    });
-}
 
 function generateMainContent(pieces) {
     const mainContent = document.getElementById('main-content');

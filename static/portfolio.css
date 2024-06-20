@@ -23,25 +23,7 @@ body {
     margin-top: 60px; /* Adjust margin to match header height */
 }
 
-.sidebar {
-    width: 250px;
-    background-color: #3D5B3F;
-    color: white;
-    padding: 20px;
-    position: fixed;
-    top: 60px; /* Adjust to start below the header */
-    left: 0;
-    height: calc(100% - 60px); /* Adjust to fill the remaining height */
-    overflow-y: auto;
-    z-index: 1000;
-}
-
-.sidebar h2 {
-    color: #f5f5f5;
-}
-
 .main-content {
-    margin-left: 250px;
     padding: 20px;
     flex: 1;
 }
@@ -54,8 +36,8 @@ body {
 }
 
 .grid-item {
-    flex: 1 1 calc(50% - 40px);
-    max-width: calc(50% - 40px);
+    flex: 1 1 calc(50%-20px);
+    max-width: calc(50% - 20px);
     position: relative;
     box-sizing: border-box;
     border: 1px solid #ccc;
@@ -83,7 +65,8 @@ body {
     justify-content: center;
     align-items: center;
     opacity: 0;
-    transition: opacity 1s;
+    transition: opacity 0.3s;
+    font-size: 36px;
 }
 
 .grid-item:hover .overlay {

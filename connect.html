@@ -14,13 +14,17 @@
     <div data-include-html="header.html"></div>
     <div class="container">
         <div class="left-column">
+            <img class="backgroundImg" src="static/images/cheeky.jpg"> </img>
+           <!---
             <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
             <div class="elfsight-app-f3e3f202-4ef3-480c-beab-443628304b7b" data-elfsight-app-lazy></div>
+           --> 
+        
         </div>
         <div class="right-column">
           <div class="form-container">    
             <form action="https://api.staticforms.xyz/submit" method="post">
-                <input type="hidden" name="accessKey" value="your-access-key-here">
+                <input type="hidden" name="accessKey" value="3be223fa-aa8e-42dc-82ba-1f130932580a">
                 <div class="form-group">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
@@ -35,14 +39,17 @@
                 </div>
                 <div class="form-group">
                     <label for="details">Details:</label>
-                    <textarea id="details" name="details" rows="5" required></textarea>
+                    <textarea id="details" name="$details" rows="5" required></textarea>
                 </div>
+                <input type="text" name="honeypot" style="display:none">
                 <button type="submit">Submit</button>
+                <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/index.html">
             </form>
           </div>
         </div>
     </div>
     <div data-include-html="footer.html"></div>
     <script src="static/include.js"></script>
+    <script src="static/toggleMenu.js"></script>
 </body>
 </html>

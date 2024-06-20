@@ -49,10 +49,11 @@ body {
     text-decoration: none
 }
 
-  
   .main .info-box:hover .aboutText {
     display: inline;
     width: 100%;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .video-background {

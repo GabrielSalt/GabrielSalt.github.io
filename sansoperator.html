@@ -13,18 +13,33 @@
 <body>
     <div data-include-html="header.html"></div>
     <div class="content">
-        <div id="who-we-are">
-            <p>My name is Jacob Beeson I am a first-year student at imperial. Through the hack starter program,  we produced a live computer-generated installation that projects unique and ever-changing silhouettes resembling a swarm. This dynamic artwork is not only visually captivating but also incorporates motion capture technology and is audio-reactive, creating an immersive and interactive experience for the audience. The constantly evolving visuals respond to the movements of viewers and ambient sounds, making each presentation of the work a singular experience.<br>
+            <p>My name is Jacob Beeson I am a first-year student at imperial. 
+                <br>Through the hack starter program,  we produced a live computer-generated installation 
+                <br>that projects  unique and ever-changing silhouettes resembling a swarm. 
+                <br>This dynamic artwork is not only visually captivating but also incorporates motion capture technology and is audio-reactive, creating an immersive and interactive experience for the audience. The constantly evolving visuals respond to the movements of viewers and ambient sounds, making each presentation of the work a singular experience.<br>
             </p>
-        </div>
-        <div id="upcoming">
-            <p>We are currently developing a piece to be displayed in the Natural History Museum for the Imperial College Fashion Show. <br>
-                We are always looking to collaborate with other creatives too so reach out!
-            </p>
-        </div>
     </div>
     <div data-include-html="footer.html"></div>
     <script src="static/include.js"></script>
     <script src="scripts.js"></script>
+    <script src="static/toggleMenu.js"></script>
+    <script>
+
+    function toggleMenu() {
+        const menu = document.getElementById('dropdown-menu');
+        if (menu.style.display === 'flex') {
+            menu.style.display = 'none';
+        } else {
+            menu.style.display = 'flex';
+        }
+    }
+    </script>
 </body>
 </html>
+
+
+<div id="upcoming">
+    <p>We are currently developing a piece to be displayed in the Natural History Museum for the Imperial College Fashion Show. <br>
+        We are always looking to collaborate with other creatives too so reach out!
+    </p>
+</div>

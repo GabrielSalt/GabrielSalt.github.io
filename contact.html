@@ -19,76 +19,71 @@
             <button id="clientsBtn" class="option-button button" onclick="showInputs('clients')">Clients / Commission</button>
         </div>
             <div id="studentInputs" class="hidden inputs">
-            <form id='myForm1' action="https://api.staticforms.xyz/submit" method="post" onsubmit="return validateForm(1)">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name">
-    
-            <label for="email">Email</label>
-            <input type="email" id="email" name='email' placeholder="Enter your email">
-    
-            <label for="longText">Describe your area of work </label>
-            <textarea id="longText1" name="$description" placeholder="..." rows="5"></textarea>
 
-            <label for="longText">What is your enquiry?</label>
-            <textarea id="longText2" name="$enquiry" placeholder="Add as much information as possible..." rows="10"></textarea>
-            <input type="hidden" name="accessKey" value="8477a1b8-78d7-4746-843f-34deeac59826">
-            <input type="hidden" name="redirectTo" value="https://davidshilling.com">
+            <form id='myForm1' action="https://formspree.io/f/manwwggq" method="post" onsubmit="return validateForm(1)">
+            <input name="formType" value="newsletter" type="hidden">
+            <label for="name1">Name</label>
+            <input type="text" id="name1" name="name" placeholder="Enter your name">
+    
+            <label for="email1">Email</label>
+            <input type="email" id="email1" name='email' placeholder="Enter your email">
+    
+            <label for="longText11">Describe your area of work </label>
+            <textarea id="longText11" name="$description" placeholder="..." rows="5"></textarea>
+
+            <label for="longText12">What is your enquiry?</label>
+            <textarea id="longText12" name="$enquiry" placeholder="Add as much information as possible..." rows="10"></textarea>
             <button type="submit" class='submit' value='submit!!'>Submit</button>
             </form>
         </div>
     
         <div id="pressInputs" class="hidden inputs">
-            <form id='myForm2' action="https://api.staticforms.xyz/submit" method="post" onsubmit="return validateForm(2)">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name">
+            <form id='myForm2' action="https://formspree.io/f/xqazzvvp" method="post" onsubmit="return validateForm(2)">
+            <input name="formType" value="press/media" type="hidden">
+            <label for="name2">Name</label>
+            <input type="text" id="name2" name="name" placeholder="Enter your name">
     
-            <label for="email">Email</label>
-            <input type="email" id="email" name='email' placeholder="Enter your email">
+            <label for="email2">Email</label>
+            <input type="email" id="email2" name='email' placeholder="Enter your email">
 
-            <label for="telephone">Telephone (Optional)</label>
-            <input type="telephone" id="telephone" name='$telephone' placeholder="Enter your telephone number">
+            <label for="telephone2">Telephone (Optional)</label>
+            <input type="telephone" id="telephone2" name='telephone' placeholder="Enter your telephone number">
             
-            <label for="Organisation">Organisation</label>
-            <input type="organisation" id="organisation" name='$organisation' placeholder="Enter your publication / media outlet's name, or 'independent' otherwise">
+            <label for="organisation2">Organisation</label>
+            <input type="organisation" id="organisation2" name='organisation' placeholder="Enter your publication / media outlet's name, or 'independent' otherwise">
 
-            <label for="name">Country</label>
-            <input type="text" id="country" name="$country" placeholder="Enter your country of residence">
+            <label for="country2">Country</label>
+            <input type="text" id="country2" name="country" placeholder="Enter your country of residence">
     
-            <label for="address">Address</label>
-            <input type="address" id="address" name='$address' placeholder="Enter your address, along with postcode">
+            <label for="address2">Address</label>
+            <input type="address" id="address2" name='address' placeholder="Enter your address, along with postcode">
 
-            <label for="longText">Enquiry</label>
-            <textarea id="longText" name="$description" placeholder="Add as much information as possible..." rows="6"></textarea>
-            <input type="hidden" name="accessKey" value="8477a1b8-78d7-4746-843f-34deeac59826">
-            <input type="hidden" name="redirectTo" value="https://davidshilling.com">
+            <label for="longText2">Enquiry</label>
+            <textarea id="longText2" name="description" placeholder="Add as much information as possible..." rows="6"></textarea>
             <button type="submit" class='submit' value='submit!!'>Submit</button>
             </form>
         </div>
     
         <div id="clientsInputs" class="hidden inputs">
-            <form id='myForm3' action="https://api.staticforms.xyz/submit" method="post" onsubmit="return validateForm(3)">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name">
+            <form id='myForm3' action="https://formspree.io/f/xldrryyb" method="post" onsubmit="return validateForm(3)">
+            <input name="formType" value="client" type="hidden">
+            <label for="name3">Name</label>
+            <input type="text" id="name3" name="name" placeholder="Enter your name">
     
-            <label for="email">Email</label>
-            <input type="email" id="email" name='email' placeholder="Enter your email">
+            <label for="email3">Email</label>
+            <input type="email" id="email3" name='email' placeholder="Enter your email">
 
-            <label for="telephone">Telephone (Optional)</label>
-            <input type="telephone" id="telephone" name='$telephone' placeholder="Enter your telephone number">
-            
-            <label for="Organisation">Organisation</label>
-            <input type="organisation" id="organisation" name='$organisation' placeholder="Enter your publication / media outlet's name, or 'independent' otherwise">
+            <label for="telephone3">Telephone (Optional)</label>
+            <input type="telephone" id="telephone3" name='telephone' placeholder="Enter your telephone number">
 
-            <label for="name">Country</label>
-            <input type="text" id="country" name="$country" placeholder="Enter your country of residence">
+            <label for="country3">Country</label>
+            <input type="text" id="country3" name="country" placeholder="Enter your country of residence">
     
-            <label for="address">Address</label>
-            <input type="address" id="address" name='$address' placeholder="Enter your address, along with postcode">
+            <label for="address3">Address</label>
+            <input type="address" id="address3" name='address' placeholder="Enter your address, along with postcode">
 
-            <label for="longText">How can we work together?</label>
-            <textarea id="longText" name="$description" placeholder="Add as much information as possible..." rows="6"></textarea>
-            <input type="hidden" name="accessKey" value="8477a1b8-78d7-4746-843f-34deeac59826">
-            <input type="hidden" name="redirectTo" value="https://davidshilling.com">
+            <label for="longText3">How can we work together?</label>
+            <textarea id="longText3" name="description" placeholder="Add as much information as possible..." rows="6"></textarea>
             <button type="submit" class='submit' value='submit!!'>Submit</button>
             </form>
         </div>

@@ -60,15 +60,13 @@
         <iframe id="overlaylad" class='overlayVideo' src='https://www.youtube.com/embed/ZKKNLffCxrw?enablejsapi=1&version=3&playerapiid=ytplayer&loop=1&playlist=ZKKNLffCxrw'></iframe>
     </div>
     <div id='overlayUpdates' class="overlay" hidden="true">
-        <form action="https://api.staticforms.xyz/submit" method="post" onsubmit="alert('Email submitted for updates!')">
-                <input type="name" id="name" name='name' placeholder="...">
-                <br>
-                <input type="email" id="email" name='email' placeholder="...">
-                <br>
-                <input type="hidden" name="accessKey" value="8477a1b8-78d7-4746-843f-34deeac59826">
-                <input type="hidden" name="redirectTo" value="https://davidshilling.com">
-                <button type="submit" class='submit' value='submit!!' onclick="submitForm()">Submit</button>
-        </form>
+        <form id='myForm4' action="https://formspree.io/f/mjvnyvag" method="POST" onsubmit="return validateForm(4)">
+            <input type="name" id="name" name='name' placeholder="...">
+            <br>
+            <input type="email" id="email" name='email' placeholder="...">
+            <br>
+            <button type="submit" class='submit' value='submit!!'>Submit</button>
+    </form>
     </div>
     <script src="static/index.js"></script>
 </body>

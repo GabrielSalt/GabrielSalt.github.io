@@ -1,10 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gabriel Salt | Software Engineer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <a href="https://sansoperator.github.io" style="position:absolute;top:50%;left:50%;transform:translateX(-50%);transform:translateY(-50%)"> Our site is now on sansoperator.github.io ⓘ </a>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <!-- Header -->
+  <header class="p-6 bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold">Gabriel Salt</h1>
+      <nav class="space-x-6">
+        <a href="#about" class="hover:text-blue-600">About</a>
+        <a href="#projects" class="hover:text-blue-600">Projects</a>
+        <a href="#contact" class="hover:text-blue-600">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+ <!-- About -->
+<section id="about" class="bg-gray-100 py-16 px-6">
+  <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    
+    <!-- Text -->
+    <div>
+      <h3 class="text-3xl font-bold mb-6">About Me</h3>
+      <p class="text-gray-700 leading-relaxed">
+        I'm a 20 year old software engineer with a passion for design, interactivity and furthering our imaginations, 
+        currently studying in London and building projects that merge theory with practical engineering. 
+        Outside of coding, I enjoy bikepacking, crafts and going out on the town.
+      </p>
+    </div>
+
+    <!-- Image -->
+    <div class="flex justify-center">
+      <img 
+        src="headshot.jpg" 
+        alt="Your Name" 
+        class="rounded-2xl shadow-lg w-64 h-64 object-cover"
+      />
+    </div>
+
+  </div>
+</section>
+
+  <!-- Projects -->
+  <section id="projects" class="max-w-5xl mx-auto py-16 px-6">
+    <h3 class="text-3xl font-bold mb-10">Projects</h3>
+    <div class="grid gap-8 md:grid-cols-2">
+
+<!-- Project Card with Icon -->
+<div class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition">
+  <!-- Icon + Title -->
+  <div class="flex items-center mb-4">
+    <img src="BradfieldGo.png" alt="BradfieldGo Project" class="rounded-2xl h-6 w-6" />
+    <h4 class="text-2xl font-semibold">BradfieldGo</h4>
+  </div>
+
+  <h5 class="text-md font-medium mb-4 text-gray-500">2021 – 2022 · Personal Project</h5>
+  <p class="text-gray-600 mb-4">
+    A custom JavaScript navigation app built for my college’s footpath network.  
+    Implemented efficient A* pathfinding for fast routing and deployed in production, now used by incoming students.  
+    Designed for extensibility so any college can deploy with their own KML file.
+  </p>
+  <a href="https://github.com/yourusername/bradfieldgo" target="_blank" class="text-blue-600 hover:underline">
+    View on GitHub →
+  </a>
+</div>
+
+      <!-- Project Card -->
+<div class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition">
+  <div class="flex items-center mb-4">
+    <img src="SansOperator.png" alt="Sans Operator Project" class="rounded-2xl h-6 w-6 mr-2" />
+    <h4 class="text-2xl font-semibold mb-2">Sans Operator</h4>
+  </div>
+  <h5 class="text-md font-medium mb-4 text-gray-500">2024 – Present · Founder</h5>
+  <p class="text-gray-600 mb-4">
+    Award-winning digital art venture transforming disused spaces into immersive installations.  
+    Applied creative coding techniques to build interactive artworks, turning raw code into engaging visual experiences 
+    and reshaping how audiences interact with urban environments.
+  </p>
+  <a href="https://gabrielsalt.github.io/SansOperator" target="_blank" class="text-blue-600 hover:underline">
+    Learn more →
+  </a>
+</div>
+
+
+      <!-- Add more projects as needed -->
+
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h3 class="text-3xl font-bold mb-4">Contact</h3>
+      <p class="mb-6 text-gray-600">Want to collaborate or just say hi? Reach me at:</p>
+      <a href="mailto:youremail@example.com" class="text-xl text-blue-600 font-medium hover:underline">salt.gabriel@gmail.com</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-6 text-center text-gray-500">
+    © 2025 Gabriel Salt
+  </footer>
+
 </body>
 </html>

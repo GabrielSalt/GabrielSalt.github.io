@@ -12,7 +12,8 @@ html {
 
 body {
   margin: 0;
-  background-color: #000;
+  background-color: beige;
+  font-family: 'Inter', sans-serif;
 }
 
 img {
@@ -30,7 +31,7 @@ img {
 }
 
 .about {
-  background-color: #0f0;
+  background-color: rgb(17, 162, 206);
   border: 5px solid #000;
   border-radius: 10px;
   display: grid;
@@ -52,7 +53,7 @@ img {
 .project-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  background-color: rgba(177, 67, 177, 0.3);
+  background-color: rgba(177, 67, 177, 0.7);
   border-radius: 10px;
   margin: 20px;
   color: #fff;
@@ -75,7 +76,7 @@ img {
 }
 
 .me-link {
-  color: rgb(204, 190, 36)
+  color: rgb(216, 199, 1)
 }
 
 .contact {

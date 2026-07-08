@@ -1,0 +1,106 @@
+/* Gabriel Salt — your stylesheet, your rules */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #000;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.project-links a {
+  color: #f0f;
+  text-decoration: none;
+}
+
+.project-links a:hover {
+  text-decoration: underline;
+}
+
+.about {
+  background-color: #0f0;
+  border: 5px solid #000;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  grid-template-areas: "text image";
+  padding-left: 20px;
+}
+
+.about-image {
+  position: relative;
+  top: 0;
+  right: 0;
+  justify-self: end;
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: rgba(177, 67, 177, 0.3);
+  border-radius: 10px;
+  margin: 20px;
+  color: #fff;
+}
+
+.project-card {
+  border-bottom: 8px dashed cadetblue;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 20px;
+}
+
+
+.project-icon {
+  align-self: center;
+  justify-self: center;
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+}
+
+.me-link {
+  color: rgb(204, 190, 36)
+}
+
+.contact {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  margin-left: 20px;
+  padding-left: 10px;
+  border-left: 2px solid #599;
+}
+
+.contact-email {
+  color: #599
+}
+
+<article class="project-card">
+<header class="project-header">
+  <img src="equinox.png" alt="" class="project-icon" />
+  <h3 class="project-title">e.quinox</h3>
+</header>
+<p class="project-meta">2025 · Web Development</p>
+<p class="project-description">
+  I built a site for e.quinox, an Imperial College club developing sustainable, scalable and self-sufficient innovations in Rwanda.
+</p>
+<div class="project-links">
+  <a href="https://equinox-icl.github.io/" target="_blank" rel="noopener noreferrer">View Site</a>
+</div>
+</article>

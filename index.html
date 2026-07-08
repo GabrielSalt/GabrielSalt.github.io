@@ -3,138 +3,118 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gabriel Salt | Software Engineer</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Gabriel Salt</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body>
 
-  <!-- Header -->
-  <header class="p-6 bg-white shadow-md sticky top-0 z-50">
-    <div class="max-w-5xl mx-auto flex justify-between items-center">
-      <h1 class="text-xl font-bold">Gabriel Salt</h1>
-      <nav class="space-x-6">
-        <a href="#about" class="hover:text-blue-600">About</a>
-        <a href="#projects" class="hover:text-blue-600">Projects</a>
-        <a href="#contact" class="hover:text-blue-600">Contact</a>
-      </nav>
-    </div>
+  <header class="about">
+        <div class="about-text">
+          <h2 class="section-title">Gabriel Salt</h2>
+          <p class="about-text">
+            I'm a 2§ year old software engineer with a passion for independence, creativity and the outdoors,
+            currently working in London for VoltView and working on multiple web development projects for clients and personal enjoyment.
+            <br>Outside of coding, I enjoy bikepacking, football and going out on the town.
+          </p>
+        </div>
+
+        <div class="about-image">
+          <img
+            src="headshot.png"
+            alt="Gabriel Salt"
+            class="headshot"
+          />
+        </div>
   </header>
 
- <!-- About -->
-<section id="about" class="bg-gray-100 py-16 px-6">
-  <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-    
-    <!-- Text -->
-    <div>
-      <h3 class="text-3xl font-bold mb-6">About Me</h3>
-      <p class="text-gray-700 leading-relaxed">
-        I'm a 20 year old software engineer with a passion for design, interactivity and furthering our imaginations, 
-        currently studying in London working on multiple web development projects for clients, clubs and personal enjoyment. 
-        Outside of coding, I enjoy bikepacking, football and going out on the town.
-      </p>
+  <main>
+
+        <div class="project-grid">
+
+          <article class="project-card">
+            <header class="project-header">
+              <img src="BradfieldGo.png" alt="" class="project-icon" />
+              <h3 class="project-title">BradfieldGo</h3>
+            </header>
+            <p class="project-meta">2022 · Personal Project</p>
+            <p class="project-description">
+              A custom JavaScript navigation app built for my college's footpath network.
+              Implemented A* pathfinding for routing and deployed in production, now used by incoming students.
+            </p>
+            <div class="project-links">
+              <a href="https://gabrielsalt.github.io/BradfieldGo" target="_blank" rel="noopener noreferrer">View Site</a>
+              <a href="https://github.com/GabrielSalt/BradfieldGo" target="_blank" rel="noopener noreferrer">View Repository</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <header class="project-header">
+              <img src="SansOperator.png" alt="" class="project-icon" />
+              <h3 class="project-title">Sans Operator</h3>
+            </header>
+            <p class="project-meta">2024 - Present · Co-Creator</p>
+            <p class="project-description">
+              Award-winning digital art venture transforming disused spaces into immersive installations.
+              We used creative coding to build interactive artworks, turning raw code into engaging visuals
+              and presented at events around London.
+            </p>
+            <div class="project-links">
+              <a href="https://gabrielsalt.github.io/SansOperator" target="_blank" rel="noopener noreferrer">View Portfolio</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <header class="project-header">
+              <img src="equinox.png" alt="" class="project-icon" />
+              <h3 class="project-title">e.quinox</h3>
+            </header>
+            <p class="project-meta">2025 · Web Development</p>
+            <p class="project-description">
+              I built a site for e.quinox, an Imperial College club developing sustainable, scalable and self-sufficient innovations in Rwanda.
+            </p>
+            <div class="project-links">
+              <a href="https://equinox-icl.github.io/" target="_blank" rel="noopener noreferrer">View Site</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <header class="project-header">
+              <h3 class="project-title">Canmore to Penticton</h3>
+            </header>
+            <p class="project-meta">2024 · Adventures</p>
+            <p class="project-description">
+              I wrote up a travel blog about my bikepacking trip from Canmore to Penticton, BC in my attempt to reach Vancouver, this can be found here:
+            </p>
+            <div class="project-links">
+              <a href="https://gabrielsalt.github.io/Canmore_to_Penticton.pdf" target="_blank" rel="noopener noreferrer">View PDF</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <header class="project-header">
+              <h3 class="project-title">My Digital Footprint</h3>
+            </header>
+            <p class="project-meta">2026 · Digital Footprint</p>
+            <p class="project-description">
+              
+              <a class="me-link" href="https://www.youtube.com/watch?v=NMbYhat-HZk" target="_blank" rel="noopener noreferrer">Dem Man Livin (YouTube)</a> <br>
+              <a class="me-link" href="https://www.bradfieldsociety.org.uk/news/bradfield-society-news/bradfieldian-stories-feature-article/1225/1225-Gabriel-Salt-D-20-23-Biking-the-Coastal-Pacific-Highway" target="_blank" rel="noopener noreferrer">Biking the Pacific Coast Highway (Bradfield Society Article)</a> <br>
+              <a class="me-link" href="https://www.warmshowers.org/user/302965" target="_blank" rel="noopener noreferrer">Warm Showers Profile</a> <br>
+              <a class="me-link" href="https://www.instagram.com/gabriel__salt/" target="_blank" rel="noopener noreferrer">Instagram</a> <br>
+              <a class="me-link" href="/things-i-like.html" target="_blank" rel="noopener noreferrer">Things I Like</a> <br>
+            </p>
+          </article>
+
+        </div>
+    <section id="contact" class="contact">
+        <p class="contact-lead">Reach me at: <a href="mailto:salt.gabriel@gmail.com" class="contact-email">salt.gabriel@gmail.com</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Gabriel Salt</p>
     </div>
-
-    <!-- Image -->
-    <div class="flex justify-center">
-      <img 
-        src="headshot.png" 
-        alt="Gabriel Salt" 
-        class="rounded-2xl shadow-lg w-64 h-64 object-cover"
-      />
-    </div>
-
-  </div>
-</section>
-
-  <!-- Projects -->
-  <section id="projects" class="max-w-5xl mx-auto py-16 px-6">
-    <h3 class="text-3xl font-bold mb-10">Projects</h3>
-    <div class="grid gap-8 md:grid-cols-2">
-
-<!-- Project Card with Icon -->
-<div class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition">
-  <!-- Icon + Title -->
-  <div class="flex items-center mb-4">
-    <img src="BradfieldGo.png" alt="BradfieldGo Project" class="rounded-2xl h-6 w-6 mr-2" />
-    <h4 class="text-2xl font-semibold">BradfieldGo</h4>
-  </div>
-
-  <h5 class="text-md font-medium mb-4 text-gray-500">2022 · Personal Project</h5>
-  <p class="text-gray-600 mb-4">
-    A custom JavaScript navigation app built for my college's footpath network.  
-    Implemented efficient A* pathfinding for fast routing and deployed in production, now used by incoming students.  
-    Designed for extensibility so any college can deploy with their own KML file.
-  </p>
-  <a href="https://gabrielsalt.github.io/BradfieldGo" target="_blank" class="text-blue-600 hover:underline">
-    View Site
-  </a>
-  <br>
-  <a href="https://github.com/GabrielSalt/BradfieldGo" target="_blank" class="text-blue-600 hover:underline">
-    View Repository
-  </a>
-</div>
-
-      <!-- Project Card -->
-<div class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition">
-  <div class="flex items-center mb-4">
-    <img src="SansOperator.png" alt="Sans Operator Project" class="rounded-2xl h-6 w-6 mr-2" />
-    <h4 class="text-2xl font-semibold mb-2">Sans Operator</h4>
-  </div>
-  <h5 class="text-md font-medium mb-4 text-gray-500">2024 - Present · Founder</h5>
-  <p class="text-gray-600 mb-4">
-    Award-winning digital art venture transforming disused spaces into immersive installations.  
-    Applied creative coding techniques to build interactive artworks, turning raw code into engaging visual experiences 
-    and reshaping how audiences interact with urban environments.
-  </p>
-  <a href="https://gabrielsalt.github.io/SansOperator" target="_blank" class="text-blue-600 hover:underline">
-    View Portfolio
-  </a>
-</div>
-
-  <!-- Project Card -->
-<div class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition">
-  <div class="flex items-center mb-4">
-    <img src="equinox.jpeg" alt="e.quinox Project" class="rounded-2xl h-6 w-6 mr-2" />
-    <h4 class="text-2xl font-semibold mb-2">e.quinox</h4>
-  </div>
-  <h5 class="text-md font-medium mb-4 text-gray-500"> 2025 · Web Development</h5>
-  <p class="text-gray-600 mb-4">
-     I built a site for e.quinox, an Imperial College club developing sustainable, scalable and self-sufficient innovations in Rwanda.
-  </p>
-  <a href="https://equinox-icl.github.io/" target="_blank" class="text-blue-600 hover:underline">
-    View Site
-  </a>
-</div>
-
-<div class="bg-white shadow-lg rounded-2xl p-6 hover:shadow-xl transition">
-
-  <h4 class="text-2xl font-semibold mb-2">Canmore to Penticton</h4>
-  <h5 class="text-md font-medium mb-4 text-gray-500"> 2024 · Adventures</h5>
-  <p class="text-gray-600 mb-4">
-     I wrote up a travel blog about my bikepacking trip from Canmore to Penticton, BC in my attempt to reach Vancouver, this can be found here: 
-  </p>
-  <a href="https://gabrielsalt.github.io/Canmore_to_Penticton.pdf" target="_blank" class="text-blue-600 hover:underline">
-    View PDF
-  </a>
-</div>
-
-      <!-- More projects vvvvvvvv -->
-
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="py-16 px-6">
-    <div class="max-w-4xl mx-auto text-center">
-      <h3 class="text-3xl font-bold mb-4">Contact</h3>
-      <p class="mb-6 text-gray-600">Want to collaborate? Reach me at:</p>
-      <a href="mailto:youremail@example.com" class="text-xl text-blue-600 font-medium hover:underline">salt.gabriel@gmail.com</a>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="py-6 text-center text-gray-500">
-    © 2025 Gabriel Salt
   </footer>
 
 </body>

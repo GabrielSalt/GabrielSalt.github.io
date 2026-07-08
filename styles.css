@@ -86,8 +86,8 @@ img {
   text-decoration: none;
 }
 
-.contact {
-  color: #fff;
+.site-footer {
+  color: #177d64;
   text-decoration: none;
   position: relative;
   margin-left: 20px;
@@ -98,17 +98,3 @@ img {
 .contact-email {
   color: #599
 }
-
-<article class="project-card">
-<header class="project-header">
-  <img src="equinox.png" alt="" class="project-icon" />
-  <h3 class="project-title">e.quinox</h3>
-</header>
-<p class="project-meta">2025 · Web Development</p>
-<p class="project-description">
-  I built a site for e.quinox, an Imperial College club developing sustainable, scalable and self-sufficient innovations in Rwanda.
-</p>
-<div class="project-links">
-  <a href="https://equinox-icl.github.io/" target="_blank" rel="noopener noreferrer">View Site</a>
-</div>
-</article>

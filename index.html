@@ -6,6 +6,7 @@
   <title>Gabriel Salt</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="colours.css" />
+  <script src="main.js" defer></script>
 </head>
 <body>
 
@@ -32,77 +33,94 @@
 
         <div class="project-grid">
 
-          <article class="project-card">
-            <header class="project-header">
+          <article class="project-card project-card--collapsible">
+            <button type="button" class="project-summary" aria-expanded="false">
               <img src="BradfieldGo.png" alt="" class="project-icon" />
-              <h3 class="project-title">BradfieldGo</h3>
-            </header>
-            <p class="project-meta">2022 · Personal Project</p>
-            <p class="project-description">
-              A custom JavaScript navigation app built for my college's footpath network.
-              Implemented A* pathfinding for routing and deployed in production, now used by incoming students.
-            </p>
-            <div class="project-links">
-              <a href="https://gabrielsalt.github.io/BradfieldGo" target="_blank" rel="noopener noreferrer">View Site</a> |
-              <a href="https://github.com/GabrielSalt/BradfieldGo" target="_blank" rel="noopener noreferrer">View Repository</a>
+              <span class="project-summary-label">
+                <span class="project-title">BradfieldGo</span>
+                <span class="project-meta">2022 · Personal Project</span>
+              </span>
+            </button>
+            <div class="project-body">
+              <p class="project-description">
+                A custom JavaScript navigation app built for my college's footpath network.
+                Implemented A* pathfinding for routing and deployed in production, now used by incoming students.
+              </p>
+              <div class="project-links">
+                <a href="https://gabrielsalt.github.io/BradfieldGo" target="_blank" rel="noopener noreferrer">View Site</a> |
+                <a href="https://github.com/GabrielSalt/BradfieldGo" target="_blank" rel="noopener noreferrer">View Repository</a>
+              </div>
             </div>
           </article>
 
-          <article class="project-card">
-            <header class="project-header">
+          <article class="project-card project-card--collapsible">
+            <button type="button" class="project-summary" aria-expanded="false">
               <img src="SansOperator.png" alt="" class="project-icon" />
-              <h3 class="project-title">Sans Operator</h3>
-            </header>
-            <p class="project-meta">2024 - Present · Co-Creator</p>
-            <p class="project-description">
-              Award-winning digital art venture transforming disused spaces into immersive installations.
-              We used creative coding to build interactive artworks, turning raw code into engaging visuals
-              and presented at events around London.
-            </p>
-            <div class="project-links">
-              <a href="https://gabrielsalt.github.io/SansOperator" target="_blank" rel="noopener noreferrer">View Portfolio</a>
+              <span class="project-summary-label">
+                <span class="project-title">Sans Operator</span>
+                <span class="project-meta">2024 - Present · Co-Creator</span>
+              </span>
+            </button>
+            <div class="project-body">
+              <p class="project-description">
+                Award-winning digital art venture transforming disused spaces into immersive installations.
+                Inspired originally by Craig Reynolds' <a class="they-link" href="https://en.wikipedia.org/wiki/Boids" target="_blank" rel="noopener noreferrer">'Boids'</a>, we turned raw code into engaging visuals
+                and presented at events around London.
+              </p>
+              <div class="project-links">
+                <a href="https://gabrielsalt.github.io/SansOperator" target="_blank" rel="noopener noreferrer">View Portfolio</a>
+              </div>
             </div>
           </article>
 
-          <article class="project-card">
-            <header class="project-header">
+          <article class="project-card project-card--collapsible">
+            <button type="button" class="project-summary" aria-expanded="false">
               <img src="equinox.png" alt="" class="project-icon" />
-              <h3 class="project-title">e.quinox</h3>
-            </header>
-            <p class="project-meta">2025 · Web Development</p>
-            <p class="project-description">
-              I built a site for e.quinox, an Imperial College club developing sustainable, scalable and self-sufficient innovations in Rwanda.
-            </p>
-            <div class="project-links">
-              <a href="https://equinox-icl.github.io/" target="_blank" rel="noopener noreferrer">View Site</a>
+              <span class="project-summary-label">
+                <span class="project-title">e.quinox</span>
+                <span class="project-meta">2025 · Web Development</span>
+              </span>
+            </button>
+            <div class="project-body">
+              <p class="project-description">
+                I built a site for e.quinox, an Imperial College club developing sustainable, scalable and self-sufficient innovations in Rwanda.
+              </p>
+              <div class="project-links">
+                <a href="https://equinox-icl.github.io/" target="_blank" rel="noopener noreferrer">View Site</a>
+              </div>
             </div>
           </article>
 
-          <article class="project-card">
-            <header class="project-header">
-              <h3 class="project-title">Canmore to Penticton</h3>
-            </header>
-            <p class="project-meta">2024 · Adventures</p>
-            <p class="project-description">
-              I wrote up a travel blog about my bikepacking trip from Canmore to Penticton, BC in my attempt to reach Vancouver, this can be found here:
-            </p>
-            <div class="project-links">
-              <a href="https://gabrielsalt.github.io/Canmore_to_Penticton.pdf" target="_blank" rel="noopener noreferrer">Read</a>
+          <article class="project-card project-card--collapsible">
+            <button type="button" class="project-summary" aria-expanded="false">
+              <span class="project-summary-label">
+                <span class="project-title">Canmore to Penticton</span>
+                <span class="project-meta">2024 · Adventures</span>
+              </span>
+            </button>
+            <div class="project-body">
+              <p class="project-description">
+                I wrote up a travel blog about my bikepacking trip from Canmore to Penticton, BC in my attempt to reach Vancouver, this can be found here:
+              </p>
+              <div class="project-links">
+                <a href="https://gabrielsalt.github.io/Canmore_to_Penticton.pdf" target="_blank" rel="noopener noreferrer">Read</a>
+              </div>
             </div>
           </article>
 
-          <article class="project-card">
+          <article class="project-card project-card--static">
             <header class="project-header">
               <h3 class="project-title">My Digital Footprint</h3>
             </header>
-            <p class="project-description">
-              
-              <a class="me-link" href="https://www.youtube.com/watch?v=NMbYhat-HZk" target="_blank" rel="noopener noreferrer">Dem Man Livin (YouTube)</a> <br>
-              <a class="me-link" href="https://www.bradfieldsociety.org.uk/news/bradfield-society-news/bradfieldian-stories-feature-article/1225/1225-Gabriel-Salt-D-20-23-Biking-the-Coastal-Pacific-Highway" target="_blank" rel="noopener noreferrer">Biking the Pacific Coast Highway (Bradfield Society Article)</a> <br>
-              <a class="me-link" href="https://www.warmshowers.org/user/302965" target="_blank" rel="noopener noreferrer">Warm Showers Profile</a> <br>
-              <a class="me-link" href="https://www.instagram.com/gabriel__salt/" target="_blank" rel="noopener noreferrer">Instagram</a> <br>
-              <a class="me-link" href="/things-i-like.html" target="_blank" rel="noopener noreferrer">Things I Like</a> <br>
-            </p>
+            <div class="project-body">
+              <p class="project-description">
+                <a class="me-link" href="https://www.youtube.com/watch?v=NMbYhat-HZk" target="_blank" rel="noopener noreferrer">Dem Man Livin (YouTube)</a> <br>
+                <a class="me-link" href="https://www.bradfieldsociety.org.uk/news/bradfield-society-news/bradfieldian-stories-feature-article/1225/1225-Gabriel-Salt-D-20-23-Biking-the-Coastal-Pacific-Highway" target="_blank" rel="noopener noreferrer">Biking the Pacific Coast Highway (Bradfield Society Article)</a> <br>
+                <a class="me-link" href="https://www.warmshowers.org/user/302965" target="_blank" rel="noopener noreferrer">Warm Showers Profile</a> <br>
+                <a class="me-link" href="https://www.instagram.com/gabriel__salt/" target="_blank" rel="noopener noreferrer">Instagram</a> <br>
+                <a class="me-link" href="/things-i-like.html" target="_blank" rel="noopener noreferrer">Things I Like</a> <br>
+              </p>
+            </div>
           </article>
 
         </div>

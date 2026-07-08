@@ -63,11 +63,43 @@ img {
 
 .project-card {
   border-bottom: 8px dashed cadetblue;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 10px;
   padding-bottom: 20px;
 }
 
+.project-summary {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.project-summary-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.project-title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.project-meta {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
 
 .project-icon {
   align-self: center;
@@ -75,6 +107,23 @@ img {
   width: 50%;
   height: auto;
   object-fit: cover;
+  flex-shrink: 0;
+}
+
+.project-card--collapsible .project-body {
+  margin-top: 0.75rem;
+}
+
+.project-card--collapsible:not(.is-expanded) .project-body {
+  display: none;
+}
+
+.project-card--static .project-header {
+  margin-bottom: 0.5rem;
+}
+
+.project-card--static .project-title {
+  font-size: 1.5rem;
 }
 
 .me-link {
@@ -83,7 +132,6 @@ img {
 
 .they-link {
   color: white;
-  text-decoration: none;
 }
 
 .site-footer {
@@ -97,4 +145,73 @@ img {
 
 .contact-email {
   color: #599
+}
+
+@media (max-width: 767px) {
+  .about {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "text"
+      "image";
+    padding: 16px;
+  }
+
+  .about-image {
+    justify-self: center;
+    width: 160px;
+    margin-top: 1rem;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+    margin: 12px;
+  }
+
+  .project-card {
+    border: 1px solid rgb(200, 0, 255);
+  }
+
+  .project-icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+  }
+
+  .project-title {
+    font-size: 1rem;
+  }
+
+  .project-meta {
+    font-size: 0.8rem;
+  }
+
+  .project-card--collapsible.is-expanded .project-summary {
+    margin-bottom: 0.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .project-card--collapsible .project-summary {
+    display: block;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  .project-card--collapsible .project-summary-label {
+    display: block;
+  }
+
+  .project-card--collapsible .project-icon {
+    width: 50%;
+    height: auto;
+    margin: 0 auto 0.5rem;
+  }
+
+  .project-card--collapsible .project-meta {
+    margin-bottom: 0.75rem;
+  }
+
+  .project-card--collapsible .project-body {
+    display: block;
+  }
 }

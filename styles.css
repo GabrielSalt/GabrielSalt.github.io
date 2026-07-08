@@ -33,7 +33,7 @@ img {
 }
 
 .about {
-  background-color: rgb(17, 162, 206);
+  background-color: rgba(17, 162, 206, 0.374);
   border: 5px solid #000;
   border-radius: 10px;
   display: grid;
@@ -79,6 +79,11 @@ img {
 
 .me-link {
   color: rgb(216, 199, 1)
+}
+
+.they-link {
+  color: white;
+  text-decoration: none;
 }
 
 .contact {

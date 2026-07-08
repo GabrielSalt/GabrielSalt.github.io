@@ -1,0 +1,63 @@
+.ylw {
+    color: rgb(127, 120, 44);
+}
+
+.ylw:hover {
+    text-decoration: underline;
+}
+
+.blu {
+    color: rgb(17, 162, 206);
+}
+
+.blu:hover {
+    text-decoration: underline;
+}
+
+.drkblu {
+    color: rgb(6, 57, 73);
+}
+
+.drkblu:hover {
+    text-decoration: underline;
+}
+
+.red {
+    color: rgba(244, 90, 90, 0.649);
+}       
+
+.red:hover {
+    text-decoration: underline;
+}
+
+.gre {
+    color: rgb(0, 128, 0);
+}
+
+.gre:hover {
+    text-decoration: underline;
+}
+
+.whi {
+    color: rgb(255, 255, 255);
+}
+
+.whi:hover {
+    text-decoration: underline;
+}
+
+.pur {
+    color: rgb(200, 0, 255);
+}
+
+.pur:hover {
+    text-decoration: underline;
+}
+
+.orn {
+    color: rgb(255, 102, 0);
+}
+
+.orn:hover {
+    text-decoration: underline;
+}

@@ -34,7 +34,7 @@ img {
 
 .about {
   background-color: rgba(17, 162, 206, 0.374);
-  border: 5px solid #000;
+  border: 5px solid beige;
   border-radius: 10px;
   display: grid;
   grid-template-columns: 1fr 200px;

@@ -28,4 +28,19 @@
 
   syncLayout();
   mobileQuery.addEventListener('change', syncLayout);
+
+  const ageEl = document.getElementById('site-age');
+  if (ageEl) {
+    const birthYear = 2005;
+    const birthMonth = 6; // June (calendar month 1–12)
+    const birthDay = 12;
+    const today = new Date();
+    const todayMonth = today.getMonth() + 1;
+    let age = today.getFullYear() - birthYear;
+    const birthdayPassed =
+      todayMonth > birthMonth ||
+      (todayMonth === birthMonth && today.getDate() >= birthDay);
+    if (!birthdayPassed) age -= 1;
+    ageEl.textContent = String(age);
+  }
 })();

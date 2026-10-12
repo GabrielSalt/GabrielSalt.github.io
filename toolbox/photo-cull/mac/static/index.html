@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Photo Cull</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <header class="top">
+      <label class="folder-wrap">
+        <span>Folder</span>
+        <select id="folder"></select>
+      </label>
+      <div class="name-wrap">
+        <input
+          id="name"
+          type="text"
+          spellcheck="false"
+          autocomplete="off"
+          placeholder="Name this"
+        />
+        <span id="ext"></span>
+      </div>
+      <div id="counter" class="counter">—</div>
+    </header>
+
+    <main class="stage" id="stage">
+      <button type="button" class="side" id="prevBtn" aria-label="Previous">
+        <img id="prevImg" alt="" />
+        <span class="film" id="prevFilm" hidden>Video</span>
+        <span class="ghost">←</span>
+      </button>
+      <figure class="current" id="currentWrap">
+        <img id="currentImg" alt="Current shot" />
+        <video id="currentVideo" autoplay playsinline hidden></video>
+        <p class="preparing" id="preparing" hidden>Preparing video…</p>
+        <figcaption class="empty" id="empty">
+          Make a folder in <code>Desktop/Photos</code>, drop photos or videos in, then pick it above.
+        </figcaption>
+      </figure>
+      <button type="button" class="side" id="nextBtn" aria-label="Next">
+        <img id="nextImg" alt="" />
+        <span class="film" id="nextFilm" hidden>Video</span>
+        <span class="ghost">→</span>
+      </button>
+    </main>
+
+    <footer class="bar">
+      <p class="hints">
+        <kbd>←</kbd><kbd>→</kbd> browse
+        <span>·</span>
+        <kbd>Enter</kbd> save &amp; next
+        <span>·</span>
+        <kbd>⇧</kbd><kbd>⌫</kbd> trash
+      </p>
+      <button type="button" id="trash" class="trash">Trash</button>
+    </footer>
+
+    <div id="toast" class="toast" hidden></div>
+    <script src="/static/app.js"></script>
+  </body>
+</html>

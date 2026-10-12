@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Photo Cull · Gabe's Toolbox</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="banner">
+      <p class="crumb"><a href="../">Toolbox</a> · <a href="photo-cull.zip">Download Mac app</a></p>
+      <div class="top">
+      <div class="folder-wrap">
+        <span>Folder</span>
+        <button type="button" class="pick" id="pick">Choose folder</button>
+        <input id="fallback" type="file" hidden webkitdirectory directory multiple />
+      </div>
+      <div class="name-wrap">
+        <input
+          id="name"
+          type="text"
+          spellcheck="false"
+          autocomplete="off"
+          placeholder="Name this"
+          disabled
+        />
+        <span id="ext"></span>
+      </div>
+      <div id="counter" class="counter">—</div>
+      </div>
+    </header>
+
+    <main class="stage empty-state" id="stage">
+      <button type="button" class="side" id="prevBtn" aria-label="Previous" disabled>
+        <img id="prevImg" alt="" hidden />
+        <span class="film" id="prevFilm" hidden>Video</span>
+        <span class="ghost">←</span>
+      </button>
+      <figure class="current" id="currentWrap">
+        <img id="currentImg" alt="Current shot" hidden />
+        <video id="currentVideo" autoplay playsinline hidden></video>
+        <p class="preparing" id="preparing" hidden>Preparing video…</p>
+        <figcaption class="empty" id="empty">
+          Choose a folder of photos or videos. Chrome and Edge can rename and delete. The Mac app moves rejects to Trash and plays AVI.
+        </figcaption>
+      </figure>
+      <button type="button" class="side" id="nextBtn" aria-label="Next" disabled>
+        <img id="nextImg" alt="" hidden />
+        <span class="film" id="nextFilm" hidden>Video</span>
+        <span class="ghost">→</span>
+      </button>
+    </main>
+
+    <footer class="bar">
+      <p class="hints">
+        <kbd>←</kbd><kbd>→</kbd> browse
+        <span>·</span>
+        <kbd>Enter</kbd> save &amp; next
+        <span>·</span>
+        <kbd>⇧</kbd><kbd>⌫</kbd> delete
+      </p>
+      <a class="dl" href="photo-cull.zip">Download Mac app</a>
+      <button type="button" id="trash" class="trash" disabled>Delete</button>
+    </footer>
+
+    <div id="toast" class="toast" hidden></div>
+    <script src="app.js"></script>
+  </body>
+</html>

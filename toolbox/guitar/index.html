@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chord Drill · Gabriel Salt</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="top">
+    <p class="eyebrow"><a href="../../">Gabriel Salt</a> · <a href="../">Toolbox</a></p>
+    <h1>Chord Drill</h1>
+    <p class="lede">A chord stays up in big type, with the fingering under it. A strum pattern keeps a steady pace, the progression loops like a real song, and it keeps going until you pause.</p>
+  </header>
+
+  <div class="app">
+    <section class="stage" aria-label="Current chord">
+      <p class="kicker" id="kicker"></p>
+      <p class="detail" id="detail"></p>
+      <h2 class="chord-name" id="chord-name" aria-live="polite">G</h2>
+      <p class="status" id="status"></p>
+      <p class="prog" id="prog"></p>
+      <p class="empty" id="empty" hidden></p>
+
+      <div class="stage-grid">
+        <div class="shape">
+          <div class="diagram" id="diagram"></div>
+          <p class="legend">1 index · 2 middle · 3 ring · 4 pinky</p>
+          <p class="legend">× skip that string · ○ play it open</p>
+        </div>
+        <div class="strum-col">
+          <div class="strum-now" id="strum-now" aria-hidden="true">
+            <span class="strum-arrow" id="strum-arrow">↓</span>
+            <span class="strum-word" id="strum-word">Ready</span>
+          </div>
+          <p class="pattern-name" id="pattern-name"></p>
+          <div class="strip" id="strip"></div>
+          <div class="next-block" id="next-block">
+            <p class="next-label">Next</p>
+            <p class="next-name" id="next-name"></p>
+            <div class="diagram diagram--next" id="next-diagram"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <aside class="panel" aria-label="Practice settings">
+      <div class="transport">
+        <button type="button" class="play" id="play" aria-pressed="false">Play</button>
+        <div class="row-buttons">
+          <button type="button" class="ghost" id="restart">Back to start</button>
+          <button type="button" class="ghost" id="next-chord">Next chord</button>
+        </div>
+        <button type="button" class="ghost wide" id="next-song" hidden>Next song</button>
+      </div>
+
+      <div class="panel-scroll">
+        <fieldset>
+          <legend>Tempo</legend>
+          <div class="tempo-row">
+            <input id="bpm" type="range" min="52" max="120" step="1" value="72" aria-label="Tempo in beats per minute" />
+            <output id="bpm-out" for="bpm">72</output>
+          </div>
+          <label class="check"><input type="checkbox" id="vary-tempo" checked /> New tempo when the song changes</label>
+          <p class="hint" id="hold-hint"></p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Hold each chord</legend>
+          <div class="seg" id="bars">
+            <button type="button" data-bars="1">1 bar</button>
+            <button type="button" data-bars="2" aria-pressed="true">2 bars</button>
+            <button type="button" data-bars="4">4 bars</button>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Strum</legend>
+          <div class="seg" id="pattern-mode">
+            <button type="button" data-pattern-mode="rotate" aria-pressed="true">Rotate</button>
+            <button type="button" data-pattern-mode="one">Just one</button>
+          </div>
+          <div class="pool" id="pool"></div>
+          <label class="stack" id="one-pattern-wrap">
+            Pattern
+            <select id="one-pattern"></select>
+          </label>
+          <p class="hint">Rotate picks a new order from the ticked patterns. The pace stays even either way.</p>
+        </fieldset>
+
+        <fieldset>
+          <legend>What to play</legend>
+          <label class="stack">
+            Source
+            <select id="mode">
+              <option value="mix">Mix of songs</option>
+              <option value="song">One song</option>
+              <option value="one">One chord</option>
+              <option value="random">Random cycle</option>
+              <option value="custom">My cycle</option>
+            </select>
+          </label>
+          <p class="hint" id="up-next"></p>
+          <label class="stack" id="every-wrap">
+            <span id="every-label">Next song every</span>
+            <select id="every">
+              <option value="1">1 time through</option>
+              <option value="2" selected>2 times through</option>
+              <option value="4">4 times through</option>
+              <option value="8">8 times through</option>
+            </select>
+          </label>
+
+          <div id="mode-song" hidden>
+            <label class="stack">
+              Song
+              <select id="song"></select>
+            </label>
+          </div>
+
+          <div id="mode-one" hidden>
+            <label class="stack">
+              Chord
+              <select id="one-chord"></select>
+            </label>
+          </div>
+
+          <div id="mode-random" hidden>
+            <label class="stack">
+              Chords in the cycle
+              <select id="random-length">
+                <option value="2">2</option>
+                <option value="3" selected>3</option>
+                <option value="4">4</option>
+              </select>
+            </label>
+            <button type="button" class="ghost wide" id="reshuffle">New cycle now</button>
+          </div>
+
+          <div id="mode-custom" hidden>
+            <ol class="cycle" id="custom-list"></ol>
+            <p class="hint" id="custom-empty" hidden>Nothing in this cycle yet.</p>
+            <div class="add-row">
+              <select id="custom-chord" aria-label="Chord to add"></select>
+              <button type="button" class="ghost" id="custom-add">Add</button>
+            </div>
+            <button type="button" class="ghost wide" id="custom-clear">Clear</button>
+            <p class="hint">It loops this order. G then D then Em, then G again.</p>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Difficulty</legend>
+          <div class="seg" id="difficulty"></div>
+          <ol class="set-list" id="set-list"></ol>
+          <p class="hint">Each level adds a set. A song appears when every chord in it is unlocked.</p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Extras</legend>
+          <label class="check"><input type="checkbox" id="sound" checked /> Click track</label>
+          <label class="check"><input type="checkbox" id="count-in" checked /> Count in before the first strum</label>
+          <label class="check"><input type="checkbox" id="lefty" /> Left-handed diagrams</label>
+          <p class="hint">Space bar plays and pauses.</p>
+        </fieldset>
+      </div>
+    </aside>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Chord diagram">
+  <rect width="200" height="200" rx="28" fill="#f4efe0" stroke="#5f9ea0" stroke-width="8"/>
+  <text x="100" y="58" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="700" fill="#063949">G</text>
+  <g fill="none" stroke="#063949" stroke-linecap="round">
+    <path stroke-width="4" d="M58 78h84"/>
+    <path stroke-width="2" d="M58 100h84M58 122h84M58 144h84M58 166h84"/>
+    <path stroke-width="2" d="M58 78v88M75 78v88M92 78v88M109 78v88M126 78v88M142 78v88"/>
+  </g>
+  <g fill="#063949">
+    <circle cx="58" cy="155" r="7"/>
+    <circle cx="75" cy="133" r="7"/>
+    <circle cx="142" cy="155" r="7"/>
+  </g>
+  <g fill="none" stroke="#063949" stroke-width="2">
+    <circle cx="92" cy="66" r="5"/>
+    <circle cx="109" cy="66" r="5"/>
+    <circle cx="126" cy="66" r="5"/>
+  </g>
+</svg>

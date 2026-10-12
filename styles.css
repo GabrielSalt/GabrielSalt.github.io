@@ -54,13 +54,21 @@ img {
   object-fit: cover;
 }
 
-.project-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+.boards {
   background-color: rgba(177, 67, 177, 0.7);
   border-radius: 10px;
   margin: 20px;
   color: #fff;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.below-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .project-card {
@@ -201,9 +209,13 @@ img {
     margin-top: 1rem;
   }
 
-  .project-grid {
-    grid-template-columns: 1fr;
+  .boards {
     margin: 12px;
+  }
+
+  .project-grid,
+  .below-row {
+    grid-template-columns: 1fr;
   }
 
   .project-card {

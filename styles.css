@@ -66,9 +66,9 @@ img {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.below-row {
+.below {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .project-card {
@@ -214,7 +214,7 @@ img {
   }
 
   .project-grid,
-  .below-row {
+  .below {
     grid-template-columns: 1fr;
   }
 
